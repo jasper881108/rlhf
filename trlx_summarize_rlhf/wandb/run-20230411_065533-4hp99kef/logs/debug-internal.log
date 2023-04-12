@@ -1,0 +1,439 @@
+2023-04-11 06:55:33,112 INFO    StreamThr :4733 [internal.py:wandb_internal():89] W&B internal server running at pid: 4733, started at: 2023-04-11 06:55:33.111425
+2023-04-11 06:55:33,115 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status
+2023-04-11 06:55:33,116 INFO    WriterThread:4733 [datastore.py:open_for_write():85] open: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/run-4hp99kef.wandb
+2023-04-11 06:55:33,116 DEBUG   SenderThread:4733 [sender.py:send():375] send: header
+2023-04-11 06:55:33,293 DEBUG   SenderThread:4733 [sender.py:send():375] send: run
+2023-04-11 06:55:33,685 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: check_version
+2023-04-11 06:55:33,687 INFO    SenderThread:4733 [dir_watcher.py:__init__():219] watching files in: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files
+2023-04-11 06:55:33,687 INFO    SenderThread:4733 [sender.py:_start_run_threads():1127] run started: 4hp99kef with start time 1681196133.110426
+2023-04-11 06:55:33,687 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:55:33,687 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:55:33,687 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: check_version
+2023-04-11 06:55:33,760 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: run_start
+2023-04-11 06:55:33,813 DEBUG   HandlerThread:4733 [system_info.py:__init__():31] System info init
+2023-04-11 06:55:33,814 DEBUG   HandlerThread:4733 [system_info.py:__init__():46] System info init done
+2023-04-11 06:55:33,814 INFO    HandlerThread:4733 [system_monitor.py:start():181] Starting system monitor
+2023-04-11 06:55:33,814 INFO    SystemMonitor:4733 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-04-11 06:55:33,815 INFO    HandlerThread:4733 [system_monitor.py:probe():201] Collecting system info
+2023-04-11 06:55:33,815 INFO    SystemMonitor:4733 [interfaces.py:start():190] Started cpu monitoring
+2023-04-11 06:55:33,816 INFO    SystemMonitor:4733 [interfaces.py:start():190] Started disk monitoring
+2023-04-11 06:55:33,817 INFO    SystemMonitor:4733 [interfaces.py:start():190] Started gpu monitoring
+2023-04-11 06:55:33,818 INFO    SystemMonitor:4733 [interfaces.py:start():190] Started memory monitoring
+2023-04-11 06:55:33,818 INFO    SystemMonitor:4733 [interfaces.py:start():190] Started network monitoring
+2023-04-11 06:55:33,845 DEBUG   HandlerThread:4733 [system_info.py:probe():195] Probing system
+2023-04-11 06:55:33,850 DEBUG   HandlerThread:4733 [system_info.py:_probe_git():180] Probing git
+2023-04-11 06:55:33,862 DEBUG   HandlerThread:4733 [system_info.py:_probe_git():188] Probing git done
+2023-04-11 06:55:33,862 DEBUG   HandlerThread:4733 [system_info.py:probe():240] Probing system done
+2023-04-11 06:55:33,862 DEBUG   HandlerThread:4733 [system_monitor.py:probe():210] {'os': 'Linux-4.14.305-227.531.amzn2.x86_64-x86_64-with-glibc2.2.5', 'python': '3.7.16', 'heartbeatAt': '2023-04-11T06:55:33.845798', 'startedAt': '2023-04-11T06:55:33.104115', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'trlx_gptneo_text_summarization.py', 'codePath': 'summarize_rlhf/trlx_gptneo_text_summarization.py', 'git': {'remote': 'https://github.com/CarperAI/trlx.git', 'commit': '565c3163befa5e7a083bbeb2038889b766599b44'}, 'email': None, 'root': '/home/ec2-user/rlhf/trlx', 'host': 'ip-172-31-7-50.ap-northeast-1.compute.internal', 'username': 'ec2-user', 'executable': '/home/ec2-user/venv/bin/python3', 'cpu_count': 24, 'cpu_count_logical': 48, 'cpu_freq': {'current': 2419.2121666666667, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 2102.814, 'min': 0.0, 'max': 0.0}, {'current': 2935.096, 'min': 0.0, 'max': 0.0}, {'current': 2434.207, 'min': 0.0, 'max': 0.0}, {'current': 1933.129, 'min': 0.0, 'max': 0.0}, {'current': 3211.337, 'min': 0.0, 'max': 0.0}, {'current': 3133.851, 'min': 0.0, 'max': 0.0}, {'current': 1710.217, 'min': 0.0, 'max': 0.0}, {'current': 1760.23, 'min': 0.0, 'max': 0.0}, {'current': 3132.839, 'min': 0.0, 'max': 0.0}, {'current': 1902.049, 'min': 0.0, 'max': 0.0}, {'current': 2056.974, 'min': 0.0, 'max': 0.0}, {'current': 3128.735, 'min': 0.0, 'max': 0.0}, {'current': 1758.812, 'min': 0.0, 'max': 0.0}, {'current': 1693.574, 'min': 0.0, 'max': 0.0}, {'current': 2544.025, 'min': 0.0, 'max': 0.0}, {'current': 2978.664, 'min': 0.0, 'max': 0.0}, {'current': 1858.416, 'min': 0.0, 'max': 0.0}, {'current': 2195.671, 'min': 0.0, 'max': 0.0}, {'current': 2445.425, 'min': 0.0, 'max': 0.0}, {'current': 1917.934, 'min': 0.0, 'max': 0.0}, {'current': 2869.548, 'min': 0.0, 'max': 0.0}, {'current': 2956.333, 'min': 0.0, 'max': 0.0}, {'current': 1836.807, 'min': 0.0, 'max': 0.0}, {'current': 3070.92, 'min': 0.0, 'max': 0.0}, {'current': 2381.469, 'min': 0.0, 'max': 0.0}, {'current': 3172.964, 'min': 0.0, 'max': 0.0}, {'current': 3126.977, 'min': 0.0, 'max': 0.0}, {'current': 1976.433, 'min': 0.0, 'max': 0.0}, {'current': 3219.926, 'min': 0.0, 'max': 0.0}, {'current': 1964.759, 'min': 0.0, 'max': 0.0}, {'current': 1684.571, 'min': 0.0, 'max': 0.0}, {'current': 2200.57, 'min': 0.0, 'max': 0.0}, {'current': 2585.211, 'min': 0.0, 'max': 0.0}, {'current': 1809.058, 'min': 0.0, 'max': 0.0}, {'current': 1952.273, 'min': 0.0, 'max': 0.0}, {'current': 3033.086, 'min': 0.0, 'max': 0.0}, {'current': 2926.464, 'min': 0.0, 'max': 0.0}, {'current': 1802.659, 'min': 0.0, 'max': 0.0}, {'current': 3079.312, 'min': 0.0, 'max': 0.0}, {'current': 1905.593, 'min': 0.0, 'max': 0.0}, {'current': 1734.636, 'min': 0.0, 'max': 0.0}, {'current': 2097.895, 'min': 0.0, 'max': 0.0}, {'current': 3142.814, 'min': 0.0, 'max': 0.0}, {'current': 1880.447, 'min': 0.0, 'max': 0.0}, {'current': 3126.402, 'min': 0.0, 'max': 0.0}, {'current': 3067.815, 'min': 0.0, 'max': 0.0}, {'current': 2460.237, 'min': 0.0, 'max': 0.0}, {'current': 2223.006, 'min': 0.0, 'max': 0.0}], 'disk': {'total': 511.9882621765137, 'used': 226.4215316772461}, 'gpu': 'NVIDIA A10G', 'gpu_count': 4, 'gpu_devices': [{'name': 'NVIDIA A10G', 'memory_total': 24146608128}, {'name': 'NVIDIA A10G', 'memory_total': 24146608128}, {'name': 'NVIDIA A10G', 'memory_total': 24146608128}, {'name': 'NVIDIA A10G', 'memory_total': 24146608128}], 'memory': {'total': 186.9207534790039}}
+2023-04-11 06:55:33,863 INFO    HandlerThread:4733 [system_monitor.py:probe():211] Finished collecting system info
+2023-04-11 06:55:33,863 INFO    HandlerThread:4733 [system_monitor.py:probe():214] Publishing system info
+2023-04-11 06:55:33,863 DEBUG   HandlerThread:4733 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-04-11 06:55:33,863 DEBUG   HandlerThread:4733 [system_info.py:_save_pip():67] Saving pip packages done
+2023-04-11 06:55:33,864 INFO    HandlerThread:4733 [system_monitor.py:probe():216] Finished publishing system info
+2023-04-11 06:55:33,866 DEBUG   SenderThread:4733 [sender.py:send():375] send: files
+2023-04-11 06:55:33,866 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-04-11 06:55:33,872 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-11 06:55:33,872 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: stop_status
+2023-04-11 06:55:34,062 DEBUG   SenderThread:4733 [sender.py:send():375] send: telemetry
+2023-04-11 06:55:34,062 DEBUG   SenderThread:4733 [sender.py:send():375] send: config
+2023-04-11 06:55:34,427 INFO    wandb-upload_0:4733 [upload_job.py:push():137] Uploaded file /tmp/tmppnruxnp_wandb/8vq2r103-wandb-metadata.json
+2023-04-11 06:55:34,689 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_created():278] file/dir created: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:55:34,689 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_created():278] file/dir created: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-metadata.json
+2023-04-11 06:55:34,689 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_created():278] file/dir created: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/requirements.txt
+2023-04-11 06:55:36,688 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_created():278] file/dir created: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:55:38,512 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:55:38,689 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:55:39,689 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:55:40,689 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:55:41,690 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:55:42,690 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:55:43,691 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:55:44,294 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:55:44,691 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:55:45,692 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:55:48,872 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-11 06:55:48,873 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: stop_status
+2023-04-11 06:55:50,045 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:55:54,694 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:55:55,392 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:56:00,393 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:56:02,697 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:56:03,872 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-11 06:56:03,873 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: stop_status
+2023-04-11 06:56:06,049 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:56:06,698 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/config.yaml
+2023-04-11 06:56:08,699 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:56:11,367 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:56:15,771 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:56:16,775 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:56:18,702 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:56:18,873 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-11 06:56:18,873 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: stop_status
+2023-04-11 06:56:22,035 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:56:23,675 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: log_artifact
+2023-04-11 06:56:23,675 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: log_artifact
+2023-04-11 06:56:23,704 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_created():278] file/dir created: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/media/table/samples_0_2ad6cbefb722c8c2d0af.table.json
+2023-04-11 06:56:23,704 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_created():278] file/dir created: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/media
+2023-04-11 06:56:23,704 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_created():278] file/dir created: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/media/table
+2023-04-11 06:56:24,020 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:56:24,208 INFO    wandb-upload_0:4733 [upload_job.py:push():137] Uploaded file /tmp/tmppnruxnp_wandb/cpt766pq-media/table/samples_0_2ad6cbefb722c8c2d0af.table.json
+2023-04-11 06:56:24,704 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:56:25,060 INFO    wandb-upload_1:4733 [upload_job.py:push():95] Uploaded file /home/ec2-user/.local/share/wandb/artifacts/staging/tmpyka4cubr
+2023-04-11 06:56:25,065 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:56:25,705 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:56:25,914 INFO    SenderThread:4733 [sender.py:send_request_log_artifact():1438] logged artifact run-4hp99kef-samples - {'id': 'QXJ0aWZhY3Q6NDIxMDIyMDA1', 'digest': 'b19497129a8b2eef5f75141db6e3ae21', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjYxNzQzMjA2', 'latestArtifact': None}, 'version': 'latest'}
+2023-04-11 06:56:25,914 DEBUG   SenderThread:4733 [sender.py:send():375] send: files
+2023-04-11 06:56:25,914 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file media/table/samples_0_2ad6cbefb722c8c2d0af.table.json with policy now
+2023-04-11 06:56:25,914 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:56:25,914 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:56:25,915 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:56:25,938 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:56:25,941 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:56:25,941 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:56:25,942 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:56:26,434 INFO    wandb-upload_3:4733 [upload_job.py:push():137] Uploaded file /tmp/tmppnruxnp_wandb/h8gxps4n-media/table/samples_0_2ad6cbefb722c8c2d0af.table.json
+2023-04-11 06:56:26,705 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:56:26,813 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:56:26,814 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:56:26,815 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:56:26,815 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:56:27,706 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:56:27,707 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:56:27,816 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:56:28,534 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:56:28,536 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:56:28,536 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:56:28,538 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:56:28,707 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:56:28,707 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:56:29,708 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:56:30,251 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:56:30,252 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:56:30,252 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:56:30,253 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:56:30,708 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:56:30,708 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:56:31,970 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:56:31,971 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:56:31,972 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:56:31,974 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:56:32,709 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:56:32,709 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:56:32,975 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:56:33,687 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:56:33,688 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:56:33,689 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:56:33,689 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:56:33,709 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:56:33,819 DEBUG   SystemMonitor:4733 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-04-11 06:56:33,820 DEBUG   SenderThread:4733 [sender.py:send():375] send: stats
+2023-04-11 06:56:33,873 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-11 06:56:33,873 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: stop_status
+2023-04-11 06:56:34,710 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:56:35,352 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:56:35,353 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:56:35,353 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:56:35,354 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:56:35,710 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:56:36,711 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:56:37,015 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:56:37,017 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:56:37,017 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:56:37,018 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:56:37,711 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:56:38,018 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:56:38,680 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:56:38,681 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:56:38,682 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:56:38,682 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:56:38,712 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:56:38,712 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:56:40,339 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:56:40,340 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:56:40,340 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:56:40,341 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:56:40,713 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:56:40,713 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:56:41,995 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:56:41,997 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:56:41,998 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:56:42,000 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:56:42,714 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:56:42,714 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:56:43,636 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:56:43,637 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:56:43,638 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:56:43,638 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:56:43,638 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:56:43,714 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:56:44,715 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:56:45,277 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:56:45,278 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:56:45,278 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:56:45,278 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:56:45,715 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:56:46,716 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:56:46,921 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:56:46,922 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:56:46,922 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:56:46,923 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:56:47,717 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:56:48,568 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:56:48,570 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:56:48,570 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:56:48,571 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:56:48,717 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:56:48,717 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:56:48,873 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-11 06:56:48,873 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: stop_status
+2023-04-11 06:56:49,043 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:56:50,717 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:56:54,044 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:56:58,721 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:56:59,813 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:57:03,822 DEBUG   SenderThread:4733 [sender.py:send():375] send: stats
+2023-04-11 06:57:03,873 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-11 06:57:03,874 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: stop_status
+2023-04-11 06:57:04,723 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:57:05,038 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:57:10,039 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:57:12,726 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:57:15,693 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:57:17,881 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:57:18,755 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:57:18,756 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:57:18,757 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:57:18,757 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:57:18,873 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-11 06:57:18,874 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: stop_status
+2023-04-11 06:57:19,729 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:57:20,414 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:57:20,416 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:57:20,416 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:57:20,416 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:57:20,729 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:57:20,730 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:57:21,417 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:57:21,730 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:57:22,069 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:57:22,071 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:57:22,071 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:57:22,071 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:57:22,730 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:57:22,730 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:57:23,739 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:57:23,740 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:57:23,740 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:57:23,741 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:57:24,732 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:57:24,732 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:57:25,390 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:57:25,391 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:57:25,392 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:57:25,392 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:57:25,733 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:57:26,733 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:57:27,039 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:57:27,039 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:57:27,041 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:57:27,041 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:57:27,042 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:57:27,733 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:57:28,688 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:57:28,689 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:57:28,689 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:57:28,690 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:57:28,734 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:57:28,734 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:57:30,350 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:57:30,351 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:57:30,352 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:57:30,352 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:57:30,735 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:57:30,735 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:57:32,065 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:57:32,065 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:57:32,067 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:57:32,067 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:57:32,069 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:57:32,736 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:57:32,737 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:57:33,778 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:57:33,779 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:57:33,780 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:57:33,780 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:57:33,824 DEBUG   SenderThread:4733 [sender.py:send():375] send: stats
+2023-04-11 06:57:33,873 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-11 06:57:33,874 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: stop_status
+2023-04-11 06:57:34,738 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:57:34,738 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:57:35,501 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:57:35,502 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:57:35,503 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:57:35,503 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:57:35,738 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:57:36,738 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:57:37,213 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:57:37,213 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:57:37,214 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:57:37,214 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:57:37,215 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:57:37,739 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:57:38,739 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:57:38,930 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:57:38,934 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:57:38,934 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:57:38,935 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:57:39,740 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:57:40,647 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:57:40,648 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:57:40,649 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:57:40,649 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:57:40,741 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:57:40,741 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:57:42,366 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:57:42,366 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:57:42,367 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:57:42,367 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:57:42,368 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:57:42,741 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:57:42,742 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:57:44,088 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:57:44,090 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:57:44,090 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:57:44,091 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:57:44,742 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:57:44,743 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:57:46,743 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:57:48,092 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:57:48,873 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-11 06:57:48,874 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: stop_status
+2023-04-11 06:57:52,745 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:57:53,891 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:57:58,747 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:57:59,432 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:58:03,825 DEBUG   SenderThread:4733 [sender.py:send():375] send: stats
+2023-04-11 06:58:03,873 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-11 06:58:03,874 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: stop_status
+2023-04-11 06:58:06,182 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:58:08,751 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:58:09,908 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:58:11,607 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:58:11,607 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:58:11,609 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:58:11,609 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:58:11,610 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:58:11,753 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:58:12,753 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:58:13,313 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:58:13,314 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:58:13,314 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:58:13,314 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:58:13,753 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:58:14,754 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:58:15,017 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:58:15,018 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:58:15,018 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:58:15,018 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:58:15,754 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:58:16,720 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:58:16,721 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:58:16,722 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:58:16,722 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:58:16,722 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:58:16,754 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:58:16,755 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:58:18,425 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:58:18,426 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:58:18,426 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:58:18,427 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:58:18,756 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:58:18,756 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:58:18,874 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-11 06:58:18,874 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: stop_status
+2023-04-11 06:58:20,133 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:58:20,134 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:58:20,134 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:58:20,135 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:58:20,757 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:58:20,757 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:58:21,841 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:58:21,841 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:58:21,842 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:58:21,842 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:58:21,843 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:58:22,758 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:58:22,758 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:58:23,489 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:58:23,490 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:58:23,490 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:58:23,491 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:58:23,758 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:58:24,357 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:58:24,358 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:58:24,358 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:58:24,358 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:58:24,759 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:58:24,759 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:58:25,759 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:58:26,007 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:58:26,008 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:58:26,009 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:58:26,009 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:58:26,760 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:58:26,761 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:58:27,010 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:58:27,656 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:58:27,657 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:58:27,658 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:58:27,659 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:58:27,761 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:58:28,761 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:58:29,310 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:58:29,311 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:58:29,311 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:58:29,312 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:58:29,761 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:58:30,762 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:58:30,950 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:58:30,952 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:58:30,952 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:58:30,953 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:58:31,762 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:58:32,598 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:58:32,598 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:58:32,599 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:58:32,600 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:58:32,600 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:58:32,762 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:58:32,763 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:58:33,827 DEBUG   SenderThread:4733 [sender.py:send():375] send: stats
+2023-04-11 06:58:34,245 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-11 06:58:34,245 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: stop_status
+2023-04-11 06:58:34,249 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:58:34,409 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:58:34,409 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:58:34,409 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:58:34,763 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:58:34,764 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:58:35,940 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: partial_history
+2023-04-11 06:58:35,942 DEBUG   SenderThread:4733 [sender.py:send():375] send: history
+2023-04-11 06:58:35,943 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: summary_record
+2023-04-11 06:58:35,943 INFO    SenderThread:4733 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-11 06:58:36,764 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/wandb-summary.json
+2023-04-11 06:58:36,764 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:58:37,944 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:58:38,765 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:58:42,945 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:58:44,767 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:58:48,518 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:58:49,244 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-11 06:58:49,245 DEBUG   SenderThread:4733 [sender.py:send_request():402] send_request: stop_status
+2023-04-11 06:58:52,769 INFO    Thread-12 :4733 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_065533-4hp99kef/files/output.log
+2023-04-11 06:58:54,457 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:58:59,458 DEBUG   HandlerThread:4733 [handler.py:handle_request():144] handle_request: status_report
+2023-04-11 06:58:59,881 INFO    memory    :4733 [interfaces.py:monitor():140] Process proc.memory.rssMB has exited.
+2023-04-11 06:58:59,881 DEBUG   SystemMonitor:4733 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-04-11 06:58:59,881 DEBUG   SystemMonitor:4733 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-04-11 06:58:59,884 DEBUG   SenderThread:4733 [sender.py:send():375] send: stats
+2023-04-11 06:59:01,767 INFO    MainThread:4733 [internal.py:handle_exit():76] Internal process exited

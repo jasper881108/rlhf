@@ -1,0 +1,89 @@
+2023-04-12 01:01:50,638 INFO    StreamThr :8213 [internal.py:wandb_internal():89] W&B internal server running at pid: 8213, started at: 2023-04-12 01:01:50.637475
+2023-04-12 01:01:50,640 DEBUG   HandlerThread:8213 [handler.py:handle_request():144] handle_request: status
+2023-04-12 01:01:50,642 INFO    WriterThread:8213 [datastore.py:open_for_write():85] open: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230412_010150-2ik9sxoc/run-2ik9sxoc.wandb
+2023-04-12 01:01:50,642 DEBUG   SenderThread:8213 [sender.py:send():375] send: header
+2023-04-12 01:01:50,767 DEBUG   SenderThread:8213 [sender.py:send():375] send: run
+2023-04-12 01:01:51,230 DEBUG   HandlerThread:8213 [handler.py:handle_request():144] handle_request: check_version
+2023-04-12 01:01:51,231 INFO    SenderThread:8213 [dir_watcher.py:__init__():219] watching files in: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230412_010150-2ik9sxoc/files
+2023-04-12 01:01:51,232 INFO    SenderThread:8213 [sender.py:_start_run_threads():1127] run started: 2ik9sxoc with start time 1681261310.6365
+2023-04-12 01:01:51,232 DEBUG   SenderThread:8213 [sender.py:send_request():402] send_request: summary_record
+2023-04-12 01:01:51,232 INFO    SenderThread:8213 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-04-12 01:01:51,232 DEBUG   SenderThread:8213 [sender.py:send_request():402] send_request: check_version
+2023-04-12 01:01:51,311 DEBUG   HandlerThread:8213 [handler.py:handle_request():144] handle_request: run_start
+2023-04-12 01:01:51,486 DEBUG   HandlerThread:8213 [system_info.py:__init__():31] System info init
+2023-04-12 01:01:51,486 DEBUG   HandlerThread:8213 [system_info.py:__init__():46] System info init done
+2023-04-12 01:01:51,486 INFO    HandlerThread:8213 [system_monitor.py:start():181] Starting system monitor
+2023-04-12 01:01:51,486 INFO    SystemMonitor:8213 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-04-12 01:01:51,487 INFO    HandlerThread:8213 [system_monitor.py:probe():201] Collecting system info
+2023-04-12 01:01:51,487 INFO    SystemMonitor:8213 [interfaces.py:start():190] Started cpu monitoring
+2023-04-12 01:01:51,488 INFO    SystemMonitor:8213 [interfaces.py:start():190] Started disk monitoring
+2023-04-12 01:01:51,489 INFO    SystemMonitor:8213 [interfaces.py:start():190] Started gpu monitoring
+2023-04-12 01:01:51,490 INFO    SystemMonitor:8213 [interfaces.py:start():190] Started memory monitoring
+2023-04-12 01:01:51,492 INFO    SystemMonitor:8213 [interfaces.py:start():190] Started network monitoring
+2023-04-12 01:01:51,514 DEBUG   HandlerThread:8213 [system_info.py:probe():195] Probing system
+2023-04-12 01:01:51,520 DEBUG   HandlerThread:8213 [system_info.py:_probe_git():180] Probing git
+2023-04-12 01:01:51,532 DEBUG   HandlerThread:8213 [system_info.py:_probe_git():188] Probing git done
+2023-04-12 01:01:51,532 DEBUG   HandlerThread:8213 [system_info.py:probe():240] Probing system done
+2023-04-12 01:01:51,532 DEBUG   HandlerThread:8213 [system_monitor.py:probe():210] {'os': 'Linux-4.14.305-227.531.amzn2.x86_64-x86_64-with-glibc2.2.5', 'python': '3.7.16', 'heartbeatAt': '2023-04-12T01:01:51.514577', 'startedAt': '2023-04-12T01:01:50.625205', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'trlx_gptneo_text_summarization.py', 'codePath': 'summarize_rlhf/trlx_gptneo_text_summarization.py', 'git': {'remote': 'https://github.com/CarperAI/trlx.git', 'commit': '565c3163befa5e7a083bbeb2038889b766599b44'}, 'email': None, 'root': '/home/ec2-user/rlhf/trlx', 'host': 'ip-172-31-7-50.ap-northeast-1.compute.internal', 'username': 'ec2-user', 'executable': '/home/ec2-user/venv/bin/python3', 'cpu_count': 24, 'cpu_count_logical': 48, 'cpu_freq': {'current': 2369.518729166667, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 1769.006, 'min': 0.0, 'max': 0.0}, {'current': 1688.479, 'min': 0.0, 'max': 0.0}, {'current': 1685.284, 'min': 0.0, 'max': 0.0}, {'current': 3130.807, 'min': 0.0, 'max': 0.0}, {'current': 2580.264, 'min': 0.0, 'max': 0.0}, {'current': 2835.784, 'min': 0.0, 'max': 0.0}, {'current': 3117.412, 'min': 0.0, 'max': 0.0}, {'current': 3062.818, 'min': 0.0, 'max': 0.0}, {'current': 1784.33, 'min': 0.0, 'max': 0.0}, {'current': 1729.577, 'min': 0.0, 'max': 0.0}, {'current': 1887.198, 'min': 0.0, 'max': 0.0}, {'current': 2826.378, 'min': 0.0, 'max': 0.0}, {'current': 1796.606, 'min': 0.0, 'max': 0.0}, {'current': 1756.913, 'min': 0.0, 'max': 0.0}, {'current': 2007.517, 'min': 0.0, 'max': 0.0}, {'current': 2168.032, 'min': 0.0, 'max': 0.0}, {'current': 2485.531, 'min': 0.0, 'max': 0.0}, {'current': 3023.905, 'min': 0.0, 'max': 0.0}, {'current': 3087.038, 'min': 0.0, 'max': 0.0}, {'current': 3161.766, 'min': 0.0, 'max': 0.0}, {'current': 2135.124, 'min': 0.0, 'max': 0.0}, {'current': 3059.139, 'min': 0.0, 'max': 0.0}, {'current': 2802.648, 'min': 0.0, 'max': 0.0}, {'current': 2142.713, 'min': 0.0, 'max': 0.0}, {'current': 1904.994, 'min': 0.0, 'max': 0.0}, {'current': 1661.331, 'min': 0.0, 'max': 0.0}, {'current': 1723.763, 'min': 0.0, 'max': 0.0}, {'current': 3213.81, 'min': 0.0, 'max': 0.0}, {'current': 2419.719, 'min': 0.0, 'max': 0.0}, {'current': 2455.386, 'min': 0.0, 'max': 0.0}, {'current': 2450.449, 'min': 0.0, 'max': 0.0}, {'current': 2374.199, 'min': 0.0, 'max': 0.0}, {'current': 1738.833, 'min': 0.0, 'max': 0.0}, {'current': 1830.165, 'min': 0.0, 'max': 0.0}, {'current': 1927.511, 'min': 0.0, 'max': 0.0}, {'current': 3131.016, 'min': 0.0, 'max': 0.0}, {'current': 1879.585, 'min': 0.0, 'max': 0.0}, {'current': 1742.85, 'min': 0.0, 'max': 0.0}, {'current': 1966.327, 'min': 0.0, 'max': 0.0}, {'current': 3015.762, 'min': 0.0, 'max': 0.0}, {'current': 2260.652, 'min': 0.0, 'max': 0.0}, {'current': 2269.869, 'min': 0.0, 'max': 0.0}, {'current': 2185.775, 'min': 0.0, 'max': 0.0}, {'current': 3203.023, 'min': 0.0, 'max': 0.0}, {'current': 2655.426, 'min': 0.0, 'max': 0.0}, {'current': 3113.419, 'min': 0.0, 'max': 0.0}, {'current': 2517.538, 'min': 0.0, 'max': 0.0}, {'current': 2371.228, 'min': 0.0, 'max': 0.0}], 'disk': {'total': 511.9882621765137, 'used': 301.63983154296875}, 'gpu': 'NVIDIA A10G', 'gpu_count': 4, 'gpu_devices': [{'name': 'NVIDIA A10G', 'memory_total': 24146608128}, {'name': 'NVIDIA A10G', 'memory_total': 24146608128}, {'name': 'NVIDIA A10G', 'memory_total': 24146608128}, {'name': 'NVIDIA A10G', 'memory_total': 24146608128}], 'memory': {'total': 186.9207534790039}}
+2023-04-12 01:01:51,532 INFO    HandlerThread:8213 [system_monitor.py:probe():211] Finished collecting system info
+2023-04-12 01:01:51,532 INFO    HandlerThread:8213 [system_monitor.py:probe():214] Publishing system info
+2023-04-12 01:01:51,532 DEBUG   HandlerThread:8213 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-04-12 01:01:51,532 DEBUG   HandlerThread:8213 [system_info.py:_save_pip():67] Saving pip packages done
+2023-04-12 01:01:51,533 INFO    HandlerThread:8213 [system_monitor.py:probe():216] Finished publishing system info
+2023-04-12 01:01:51,538 DEBUG   SenderThread:8213 [sender.py:send():375] send: files
+2023-04-12 01:01:51,538 INFO    SenderThread:8213 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-04-12 01:01:51,543 DEBUG   HandlerThread:8213 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-12 01:01:51,544 DEBUG   SenderThread:8213 [sender.py:send_request():402] send_request: stop_status
+2023-04-12 01:01:51,730 DEBUG   SenderThread:8213 [sender.py:send():375] send: telemetry
+2023-04-12 01:01:51,730 DEBUG   SenderThread:8213 [sender.py:send():375] send: config
+2023-04-12 01:01:52,087 INFO    wandb-upload_0:8213 [upload_job.py:push():137] Uploaded file /tmp/tmpjxb0jgfvwandb/r4r656jy-wandb-metadata.json
+2023-04-12 01:01:52,233 INFO    Thread-12 :8213 [dir_watcher.py:_on_file_created():278] file/dir created: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230412_010150-2ik9sxoc/files/wandb-summary.json
+2023-04-12 01:01:52,233 INFO    Thread-12 :8213 [dir_watcher.py:_on_file_created():278] file/dir created: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230412_010150-2ik9sxoc/files/requirements.txt
+2023-04-12 01:01:52,233 INFO    Thread-12 :8213 [dir_watcher.py:_on_file_created():278] file/dir created: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230412_010150-2ik9sxoc/files/wandb-metadata.json
+2023-04-12 01:01:53,232 INFO    Thread-12 :8213 [dir_watcher.py:_on_file_created():278] file/dir created: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230412_010150-2ik9sxoc/files/output.log
+2023-04-12 01:01:55,233 INFO    Thread-12 :8213 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230412_010150-2ik9sxoc/files/output.log
+2023-04-12 01:01:55,757 DEBUG   HandlerThread:8213 [handler.py:handle_request():144] handle_request: status_report
+2023-04-12 01:01:56,233 INFO    Thread-12 :8213 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230412_010150-2ik9sxoc/files/output.log
+2023-04-12 01:01:58,235 INFO    Thread-12 :8213 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230412_010150-2ik9sxoc/files/output.log
+2023-04-12 01:01:59,235 INFO    Thread-12 :8213 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230412_010150-2ik9sxoc/files/output.log
+2023-04-12 01:02:00,235 INFO    Thread-12 :8213 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230412_010150-2ik9sxoc/files/output.log
+2023-04-12 01:02:00,840 DEBUG   HandlerThread:8213 [handler.py:handle_request():144] handle_request: status_report
+2023-04-12 01:02:02,237 INFO    Thread-12 :8213 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230412_010150-2ik9sxoc/files/output.log
+2023-04-12 01:02:04,237 INFO    Thread-12 :8213 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230412_010150-2ik9sxoc/files/output.log
+2023-04-12 01:02:06,203 DEBUG   HandlerThread:8213 [handler.py:handle_request():144] handle_request: status_report
+2023-04-12 01:02:06,544 DEBUG   HandlerThread:8213 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-12 01:02:06,544 DEBUG   SenderThread:8213 [sender.py:send_request():402] send_request: stop_status
+2023-04-12 01:02:11,733 DEBUG   HandlerThread:8213 [handler.py:handle_request():144] handle_request: status_report
+2023-04-12 01:02:16,734 DEBUG   HandlerThread:8213 [handler.py:handle_request():144] handle_request: status_report
+2023-04-12 01:02:21,544 DEBUG   HandlerThread:8213 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-12 01:02:21,544 DEBUG   SenderThread:8213 [sender.py:send_request():402] send_request: stop_status
+2023-04-12 01:02:22,714 DEBUG   HandlerThread:8213 [handler.py:handle_request():144] handle_request: status_report
+2023-04-12 01:02:23,243 INFO    Thread-12 :8213 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230412_010150-2ik9sxoc/files/config.yaml
+2023-04-12 01:02:27,913 DEBUG   HandlerThread:8213 [handler.py:handle_request():144] handle_request: status_report
+2023-04-12 01:02:32,914 DEBUG   HandlerThread:8213 [handler.py:handle_request():144] handle_request: status_report
+2023-04-12 01:02:36,544 DEBUG   HandlerThread:8213 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-12 01:02:36,544 DEBUG   SenderThread:8213 [sender.py:send_request():402] send_request: stop_status
+2023-04-12 01:02:38,707 DEBUG   HandlerThread:8213 [handler.py:handle_request():144] handle_request: status_report
+2023-04-12 01:02:42,248 INFO    Thread-12 :8213 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230412_010150-2ik9sxoc/files/output.log
+2023-04-12 01:02:43,881 DEBUG   HandlerThread:8213 [handler.py:handle_request():144] handle_request: status_report
+2023-04-12 01:02:44,249 INFO    Thread-12 :8213 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230412_010150-2ik9sxoc/files/output.log
+2023-04-12 01:02:48,882 DEBUG   HandlerThread:8213 [handler.py:handle_request():144] handle_request: status_report
+2023-04-12 01:02:51,492 DEBUG   SystemMonitor:8213 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-04-12 01:02:51,494 DEBUG   SenderThread:8213 [sender.py:send():375] send: stats
+2023-04-12 01:02:54,496 DEBUG   HandlerThread:8213 [handler.py:handle_request():144] handle_request: status_report
+2023-04-12 01:02:55,528 INFO    memory    :8213 [interfaces.py:monitor():140] Process proc.memory.rssMB has exited.
+2023-04-12 01:02:55,529 DEBUG   SystemMonitor:8213 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-04-12 01:02:55,529 DEBUG   SystemMonitor:8213 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-04-12 01:02:55,534 DEBUG   SenderThread:8213 [sender.py:send():375] send: stats
+2023-04-12 01:02:55,713 WARNING StreamThr :8213 [internal.py:is_dead():415] Internal process exiting, parent pid 7492 disappeared
+2023-04-12 01:02:55,713 ERROR   StreamThr :8213 [internal.py:wandb_internal():152] Internal process shutdown.
+2023-04-12 01:02:56,531 INFO    HandlerThread:8213 [handler.py:finish():845] shutting down handler
+2023-04-12 01:02:56,531 INFO    HandlerThread:8213 [system_monitor.py:finish():190] Stopping system monitor
+2023-04-12 01:02:56,531 INFO    HandlerThread:8213 [interfaces.py:finish():202] Joined cpu monitor
+2023-04-12 01:02:56,531 INFO    HandlerThread:8213 [interfaces.py:finish():202] Joined disk monitor
+2023-04-12 01:02:56,531 INFO    HandlerThread:8213 [interfaces.py:finish():202] Joined gpu monitor
+2023-04-12 01:02:56,532 INFO    HandlerThread:8213 [interfaces.py:finish():202] Joined memory monitor
+2023-04-12 01:02:56,532 INFO    HandlerThread:8213 [interfaces.py:finish():202] Joined network monitor
+2023-04-12 01:02:56,534 INFO    WriterThread:8213 [datastore.py:close():298] close: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230412_010150-2ik9sxoc/run-2ik9sxoc.wandb
+2023-04-12 01:02:56,534 INFO    SenderThread:8213 [sender.py:finish():1550] shutting down sender
+2023-04-12 01:02:57,282 INFO    MainThread:8213 [internal.py:handle_exit():76] Internal process exited

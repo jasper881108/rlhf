@@ -1,0 +1,696 @@
+Using /home/ec2-user/.cache/torch_extensions/py37_cu117 as PyTorch extensions root...
+Detected CUDA files, patching ldflags
+Emitting ninja build file /home/ec2-user/.cache/torch_extensions/py37_cu117/cpu_adam/build.ninja...
+Building extension module cpu_adam...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+Loading extension module cpu_adam...
+Time to load cpu_adam op: 1.7028441429138184 seconds
+[2023-04-11 08:26:37,051] [INFO] [logging.py:93:log_dist] [Rank -1] DeepSpeed info: version=0.8.3, git-hash=unknown, git-branch=unknown
+Using /home/ec2-user/.cache/torch_extensions/py37_cu117 as PyTorch extensions root...
+[2023-04-11 08:26:38,781] [INFO] [logging.py:93:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+[2023-04-11 08:26:38,783] [INFO] [logging.py:93:log_dist] [Rank 0] Removing param_group that has no 'params' in the client Optimizer
+[2023-04-11 08:26:38,783] [INFO] [logging.py:93:log_dist] [Rank 0] Using client Optimizer as basic optimizer
+[2023-04-11 08:26:38,818] [INFO] [logging.py:93:log_dist] [Rank 0] DeepSpeed Basic Optimizer = DeepSpeedCPUAdam
+[2023-04-11 08:26:38,819] [INFO] [utils.py:56:is_zero_supported_optimizer] Checking ZeRO support for optimizer=DeepSpeedCPUAdam type=<class 'deepspeed.ops.adam.cpu_adam.DeepSpeedCPUAdam'>
+[2023-04-11 08:26:38,819] [INFO] [logging.py:93:log_dist] [Rank 0] Creating torch.float16 ZeRO stage 2 optimizer
+[2023-04-11 08:26:38,819] [INFO] [stage_1_and_2.py:144:__init__] Reduce bucket size 500000000
+[2023-04-11 08:26:38,819] [INFO] [stage_1_and_2.py:145:__init__] Allgather bucket size 500000000
+[2023-04-11 08:26:38,819] [INFO] [stage_1_and_2.py:146:__init__] CPU Offload: True
+[2023-04-11 08:26:38,819] [INFO] [stage_1_and_2.py:147:__init__] Round robin gradient partitioning: False
+Time to load utils op: 0.6026730537414551 seconds
+Loading extension module utils...
+Rank: 0 partition count [3] and sizes[(172779522, False)]
+[2023-04-11 08:26:41,399] [INFO] [utils.py:829:see_memory_usage] Before initializing optimizer states
+[2023-04-11 08:26:41,400] [INFO] [utils.py:834:see_memory_usage] MA 3.72 GB         Max_MA 3.72 GB         CA 3.97 GB         Max_CA 4 GB
+[2023-04-11 08:26:41,400] [INFO] [utils.py:839:see_memory_usage] CPU Virtual Memory:  used = 23.68 GB, percent = 12.7%
+Using /home/ec2-user/.cache/torch_extensions/py37_cu117 as PyTorch extensions root...
+No modifications detected for re-loaded extension module utils, skipping build step...
+Loading extension module utils...
+[2023-04-11 08:26:42,621] [INFO] [utils.py:829:see_memory_usage] After initializing optimizer states
+[2023-04-11 08:26:42,622] [INFO] [utils.py:834:see_memory_usage] MA 3.72 GB         Max_MA 3.72 GB         CA 3.97 GB         Max_CA 4 GB
+[2023-04-11 08:26:42,622] [INFO] [utils.py:839:see_memory_usage] CPU Virtual Memory:  used = 29.64 GB, percent = 15.9%
+[2023-04-11 08:26:42,622] [INFO] [stage_1_and_2.py:520:__init__] optimizer state initialized
+[2023-04-11 08:26:42,715] [INFO] [utils.py:829:see_memory_usage] After initializing ZeRO optimizer
+[2023-04-11 08:26:42,716] [INFO] [utils.py:834:see_memory_usage] MA 3.72 GB         Max_MA 3.72 GB         CA 3.97 GB         Max_CA 4 GB
+[2023-04-11 08:26:42,716] [INFO] [utils.py:839:see_memory_usage] CPU Virtual Memory:  used = 29.68 GB, percent = 15.9%
+[2023-04-11 08:26:42,718] [INFO] [logging.py:93:log_dist] [Rank 0] DeepSpeed Final Optimizer = DeepSpeedCPUAdam
+[2023-04-11 08:26:42,718] [INFO] [logging.py:93:log_dist] [Rank 0] DeepSpeed using client LR scheduler
+[2023-04-11 08:26:42,718] [INFO] [logging.py:93:log_dist] [Rank 0] DeepSpeed LR Scheduler = None
+[2023-04-11 08:26:42,719] [INFO] [logging.py:93:log_dist] [Rank 0] step=0, skipped=0, lr=[5e-06], mom=[[0.9, 0.999]]
+[2023-04-11 08:26:42,720] [INFO] [config.py:1018:print] DeepSpeedEngine configuration:
+[2023-04-11 08:26:42,721] [INFO] [config.py:1022:print]   activation_checkpointing_config  {
+    "partition_activations": false,
+    "contiguous_memory_optimization": false,
+    "cpu_checkpointing": false,
+    "number_checkpoints": null,
+    "synchronize_checkpoint_boundary": false,
+    "profile": false
+}
+[2023-04-11 08:26:42,721] [INFO] [config.py:1022:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True}
+[2023-04-11 08:26:42,721] [INFO] [config.py:1022:print]   amp_enabled .................. False
+[2023-04-11 08:26:42,721] [INFO] [config.py:1022:print]   amp_params ................... False
+[2023-04-11 08:26:42,722] [INFO] [config.py:1022:print]   autotuning_config ............ {
+    "enabled": false,
+    "start_step": null,
+    "end_step": null,
+    "metric_path": null,
+    "arg_mappings": null,
+    "metric": "throughput",
+    "model_info": null,
+    "results_dir": "autotuning_results",
+    "exps_dir": "autotuning_exps",
+    "overwrite": true,
+    "fast": true,
+    "start_profile_step": 3,
+    "end_profile_step": 5,
+    "tuner_type": "gridsearch",
+    "tuner_early_stopping": 5,
+    "tuner_num_trials": 50,
+    "model_info_path": null,
+    "mp_size": 1,
+    "max_train_batch_size": null,
+    "min_train_batch_size": 1,
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03,
+    "min_train_micro_batch_size_per_gpu": 1,
+    "num_tuning_micro_batch_sizes": 3
+}
+[2023-04-11 08:26:42,722] [INFO] [config.py:1022:print]   bfloat16_enabled ............. False
+[2023-04-11 08:26:42,722] [INFO] [config.py:1022:print]   checkpoint_parallel_write_pipeline  False
+[2023-04-11 08:26:42,722] [INFO] [config.py:1022:print]   checkpoint_tag_validation_enabled  True
+[2023-04-11 08:26:42,722] [INFO] [config.py:1022:print]   checkpoint_tag_validation_fail  False
+[2023-04-11 08:26:42,722] [INFO] [config.py:1022:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7f964401c650>
+[2023-04-11 08:26:42,722] [INFO] [config.py:1022:print]   communication_data_type ...... None
+[2023-04-11 08:26:42,722] [INFO] [config.py:1022:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2023-04-11 08:26:42,722] [INFO] [config.py:1022:print]   curriculum_enabled_legacy .... False
+[2023-04-11 08:26:42,723] [INFO] [config.py:1022:print]   curriculum_params_legacy ..... False
+[2023-04-11 08:26:42,723] [INFO] [config.py:1022:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2023-04-11 08:26:42,723] [INFO] [config.py:1022:print]   data_efficiency_enabled ...... False
+[2023-04-11 08:26:42,723] [INFO] [config.py:1022:print]   dataloader_drop_last ......... False
+[2023-04-11 08:26:42,723] [INFO] [config.py:1022:print]   disable_allgather ............ False
+[2023-04-11 08:26:42,723] [INFO] [config.py:1022:print]   dump_state ................... False
+[2023-04-11 08:26:42,723] [INFO] [config.py:1022:print]   dynamic_loss_scale_args ...... {'init_scale': 65536, 'scale_window': 1000, 'delayed_shift': 2, 'min_scale': 0.5}
+[2023-04-11 08:26:42,723] [INFO] [config.py:1022:print]   eigenvalue_enabled ........... False
+[2023-04-11 08:26:42,723] [INFO] [config.py:1022:print]   eigenvalue_gas_boundary_resolution  1
+[2023-04-11 08:26:42,723] [INFO] [config.py:1022:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2023-04-11 08:26:42,723] [INFO] [config.py:1022:print]   eigenvalue_layer_num ......... 0
+[2023-04-11 08:26:42,724] [INFO] [config.py:1022:print]   eigenvalue_max_iter .......... 100
+[2023-04-11 08:26:42,724] [INFO] [config.py:1022:print]   eigenvalue_stability ......... 1e-06
+[2023-04-11 08:26:42,724] [INFO] [config.py:1022:print]   eigenvalue_tol ............... 0.01
+[2023-04-11 08:26:42,724] [INFO] [config.py:1022:print]   eigenvalue_verbose ........... False
+[2023-04-11 08:26:42,724] [INFO] [config.py:1022:print]   elasticity_enabled ........... False
+[2023-04-11 08:26:42,724] [INFO] [config.py:1022:print]   flops_profiler_config ........ {
+    "enabled": false,
+    "profile_step": 1,
+    "module_depth": -1,
+    "top_modules": 1,
+    "detailed": true,
+    "output_file": null
+}
+[2023-04-11 08:26:42,724] [INFO] [config.py:1022:print]   fp16_auto_cast ............... False
+[2023-04-11 08:26:42,724] [INFO] [config.py:1022:print]   fp16_enabled ................. True
+[2023-04-11 08:26:42,724] [INFO] [config.py:1022:print]   fp16_master_weights_and_gradients  False
+[2023-04-11 08:26:42,725] [INFO] [config.py:1022:print]   global_rank .................. 0
+[2023-04-11 08:26:42,725] [INFO] [config.py:1022:print]   grad_accum_dtype ............. None
+[2023-04-11 08:26:42,725] [INFO] [config.py:1022:print]   gradient_accumulation_steps .. 1
+[2023-04-11 08:26:42,725] [INFO] [config.py:1022:print]   gradient_clipping ............ 0.0
+[2023-04-11 08:26:42,725] [INFO] [config.py:1022:print]   gradient_predivide_factor .... 1.0
+[2023-04-11 08:26:42,725] [INFO] [config.py:1022:print]   initial_dynamic_scale ........ 65536
+[2023-04-11 08:26:42,725] [INFO] [config.py:1022:print]   load_universal_checkpoint .... False
+[2023-04-11 08:26:42,725] [INFO] [config.py:1022:print]   loss_scale ................... 0
+[2023-04-11 08:26:42,725] [INFO] [config.py:1022:print]   memory_breakdown ............. False
+[2023-04-11 08:26:42,725] [INFO] [config.py:1022:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') enabled=False
+[2023-04-11 08:26:42,726] [INFO] [config.py:1022:print]   nebula_config ................ {
+    "enabled": false,
+    "persistent_storage_path": null,
+    "persistent_time_interval": 100,
+    "num_of_version_in_retention": 2,
+    "enable_nebula_load": true,
+    "load_path": null
+}
+[2023-04-11 08:26:42,726] [INFO] [config.py:1022:print]   optimizer_legacy_fusion ...... False
+[2023-04-11 08:26:42,726] [INFO] [config.py:1022:print]   optimizer_name ............... None
+[2023-04-11 08:26:42,726] [INFO] [config.py:1022:print]   optimizer_params ............. None
+[2023-04-11 08:26:42,726] [INFO] [config.py:1022:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0}
+[2023-04-11 08:26:42,726] [INFO] [config.py:1022:print]   pld_enabled .................. False
+[2023-04-11 08:26:42,726] [INFO] [config.py:1022:print]   pld_params ................... False
+[2023-04-11 08:26:42,726] [INFO] [config.py:1022:print]   prescale_gradients ........... False
+[2023-04-11 08:26:42,726] [INFO] [config.py:1022:print]   scheduler_name ............... None
+[2023-04-11 08:26:42,726] [INFO] [config.py:1022:print]   scheduler_params ............. None
+[2023-04-11 08:26:42,727] [INFO] [config.py:1022:print]   sparse_attention ............. None
+[2023-04-11 08:26:42,727] [INFO] [config.py:1022:print]   sparse_gradients_enabled ..... False
+[2023-04-11 08:26:42,727] [INFO] [config.py:1022:print]   steps_per_print .............. inf
+[2023-04-11 08:26:42,727] [INFO] [config.py:1022:print]   train_batch_size ............. 6
+[2023-04-11 08:26:42,727] [INFO] [config.py:1022:print]   train_micro_batch_size_per_gpu  2
+[2023-04-11 08:26:42,727] [INFO] [config.py:1022:print]   use_node_local_storage ....... False
+[2023-04-11 08:26:42,727] [INFO] [config.py:1022:print]   wall_clock_breakdown ......... False
+[2023-04-11 08:26:42,727] [INFO] [config.py:1022:print]   world_size ................... 3
+[2023-04-11 08:26:42,727] [INFO] [config.py:1022:print]   zero_allow_untested_optimizer  True
+[2023-04-11 08:26:42,727] [INFO] [config.py:1022:print]   zero_config .................. stage=2 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=500,000,000 allgather_partitions=True allgather_bucket_size=500000000 overlap_comm=False load_from_fp32_weights=True elastic_checkpoint=False offload_param=DeepSpeedZeroOffloadParamConfig(device='cpu', nvme_path=None, buffer_count=5, buffer_size=100,000,000, max_in_cpu=1,000,000,000, pin_memory=False) offload_optimizer=DeepSpeedZeroOffloadOptimizerConfig(device='cpu', nvme_path=None, buffer_count=4, pin_memory=False, pipeline=False, pipeline_read=False, pipeline_write=False, fast_init=False) sub_group_size=1,000,000,000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=50,000,000 param_persistence_threshold=100,000 model_persistence_threshold=sys.maxsize max_live_parameters=1,000,000,000 max_reuse_distance=1,000,000,000 gather_16bit_weights_on_model_save=False stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False
+[2023-04-11 08:26:42,727] [INFO] [config.py:1022:print]   zero_enabled ................. True
+[2023-04-11 08:26:42,727] [INFO] [config.py:1022:print]   zero_force_ds_cpu_optimizer .. True
+[2023-04-11 08:26:42,728] [INFO] [config.py:1022:print]   zero_optimization_stage ...... 2
+[2023-04-11 08:26:42,728] [INFO] [config.py:1013:print_user_config]   json = {
+    "train_micro_batch_size_per_gpu": 2,
+    "gradient_accumulation_steps": 1,
+    "fp16": {
+        "enabled": true,
+        "min_loss_scale": 0.5,
+        "fp16_scale_tolerance": 0.25,
+        "opt_level": "O2",
+        "auto_cast": false
+    },
+    "zero_optimization": {
+        "stage": 2,
+        "offload_param": {
+            "device": "cpu"
+        },
+        "offload_optimizer": {
+            "device": "cpu"
+        },
+        "allgather_partitions": true,
+        "allgather_bucket_size": 5.000000e+08,
+        "contiguous_gradients": true
+    },
+    "steps_per_print": inf,
+    "bf16": {
+        "enabled": false
+    },
+    "zero_allow_untested_optimizer": true
+}
+Time to load utils op: 0.0006215572357177734 seconds
+[RANK 0] Collecting rollouts
+[rollout 0 / 64]:   0%|                                                                               | 0/64 [00:00<?, ?it/s]You're using a GPT2TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+/home/ec2-user/venv/lib64/python3.7/site-packages/transformers/generation/utils.py:1202: UserWarning: You have modified the pretrained model configuration to control generation. This is a deprecated strategy to control generation and will be removed soon, in a future version. Please use a generation configuration file (see https://huggingface.co/docs/transformers/main_classes/text_generation)
+  "You have modified the pretrained model configuration to control generation. This is a"
+/home/ec2-user/rlhf/trlx/summarize_rlhf/trlx/trainer/accelerate_ppo_trainer.py:315: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  device=device,
+
+
+[rollout 64 / 64]: 100%|█████████████████████████████████████████████████████████████████████| 64/64 [02:28<00:00,  2.32s/it]
+[RANK 0] Starting training
+[RANK 0] Evaluating model
+
+
+
+
+
+
+
+
+[generation sweep 1/1 | eval batch 9/9]: 100%|█████████████████████████████████████████████████| 9/9 [01:06<00:00,  7.40s/it]
+[RANK 0] Computing rewards
+/home/ec2-user/rlhf/trlx/summarize_rlhf/trlx/trainer/accelerate_base_trainer.py:380: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  dtype=float,
+[RANK 0] Summarizing evaluation
+[3m                                              Evaluation #0 reward/mean: 0.0553                                              
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┓
+┃[1m prompt                                                  [22m┃[1m output                                                 [22m┃[1m reward [22m┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━┩
+│ SUBREDDIT: r/AskReddit                                  │  I have feelings for a friend, and I can't get them    │ 0.869  │
+│ TITLE: How do you get someone out of your head?         │ out of my head. How do I get them out?                 │        │
+│ POST: Hi,                                               │                                                        │        │
+│ I'm 22, and I have been with my girlfriend for 5 years  │                                                        │        │
+│ now. We recently moved together. We've always loved     │                                                        │        │
+│ each other intensely.                                   │                                                        │        │
+│                                                         │                                                        │        │
+│ Problem, I recently started to have feelings for an     │                                                        │        │
+│ other person (a friend). This person has had a          │                                                        │        │
+│ boyfriend for now 3 years, and has absolutely no ideas. │                                                        │        │
+│ Those feelings were so strong, it was hard to hide      │                                                        │        │
+│ them. After 2 months of me being distant and really     │                                                        │        │
+│ sad, my girlfriend forced me to say what was bothering  │                                                        │        │
+│ me. I'm not a good liar, and now she knows.             │                                                        │        │
+│                                                         │                                                        │        │
+│ We decided to give us a week alone, I went to my        │                                                        │        │
+│ parents.                                                │                                                        │        │
+│                                                         │                                                        │        │
+│ Now, I'm completely lost. I keep on thinking about this │                                                        │        │
+│ person, and I hate that. I would like for those         │                                                        │        │
+│ feelings to go away, to leave me alone. But I can't.    │                                                        │        │
+│                                                         │                                                        │        │
+│ What do I do? It's been 3 months now, and I'm just      │                                                        │        │
+│ desperate.                                              │                                                        │        │
+│ TL;DR:                                                  │                                                        │        │
+├─────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────┼────────┤
+│ SUBREDDIT: r/pettyrevenge                               │  Mom woke me up with a loud TV. I got a little revenge │ 0.373  │
+│ TITLE: So, my mom woke me up with a loud TV.            │ by blasting Gangnam Style on repeat.                   │        │
+│ POST: She was in her living room, watching TV. This was │                                                        │        │
+│ at about 8:30 in the morning, and she was exercising.   │                                                        │        │
+│ She turned the TV up extra loud to hear it over her     │                                                        │        │
+│ excercycle, and woke me up. I went in there asking for  │                                                        │        │
+│ her to turn it down. She said she didn't have to; I     │                                                        │        │
+│ explained that I always used headphones so she didn't   │                                                        │        │
+│ have to deal with my noise and that she should give me  │                                                        │        │
+│ a little more respect, given that I paid rent at the    │                                                        │        │
+│ time.                                                   │                                                        │        │
+│                                                         │                                                        │        │
+│ She disagreed. I went back to my room, rather pissed    │                                                        │        │
+│ off at the lack of equality. I had no lock on my door;  │                                                        │        │
+│ but I had a dresser right next to it, so I pulled one   │                                                        │        │
+│ of the drawers out enough so that it caused the door to │                                                        │        │
+│ not be openable. Then, I turned my speakers up really   │                                                        │        │
+│ loud and blasted Gangnam Style on repeat, with the bass │                                                        │        │
+│ cranked up as high as it could go.                      │                                                        │        │
+│                                                         │                                                        │        │
+│ If you hate Gangnam Style for being overplayed, you     │                                                        │        │
+│ will see why I chose that particular song. I personally │                                                        │        │
+│ don't mind it. But here's the thing about my bass; it   │                                                        │        │
+│ vibrates the walls, making one hell of a lot of noise.  │                                                        │        │
+│ Needless to say, my mom was not pleased and shut off    │                                                        │        │
+│ the internet. But it was oh so worth it.                │                                                        │        │
+│ TL;DR:                                                  │                                                        │        │
+├─────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────┼────────┤
+│ SUBREDDIT: r/relationships                              │  Girlfriend cheated on me by kissing two guys at a     │ 0.418  │
+│ TITLE: My girlfriend (20f) of two years cheated on me   │ Halloween party. I'm not sure if I should try to fix   │        │
+│ (20m) by kissing two guys at a Halloween party.         │ it or just cut it off.                                 │        │
+│ POST: Lately her and I have been having a few problems, │                                                        │        │
+│ and these problems have been brought up before a few    │                                                        │        │
+│ times. One problem being that I don't show enough       │                                                        │        │
+│ affection. I don't tell her she's pretty very often or  │                                                        │        │
+│ don't compliment her much. I feel terrible about it,    │                                                        │        │
+│ but this time I was really trying to change for her.    │                                                        │        │
+│                                                         │                                                        │        │
+│ For Halloween she went to visit her step brother at a   │                                                        │        │
+│ college and I got drunk with my friends and watched     │                                                        │        │
+│ movies. Last night (11/1) we got in a huge fight about  │                                                        │        │
+│ me not changing and how our relationship won't work out │                                                        │        │
+│ and basically broke up over the phone. So in an effort  │                                                        │        │
+│ to try and fix it I drove to her house. She told me how │                                                        │        │
+│ at the parties she went to that two guys kissed her.    │                                                        │        │
+│ The first one she pushed away, but the second one I     │                                                        │        │
+│ asked her if she kissed him back and she said yes and   │                                                        │        │
+│ that she did it because it made her feel wanted, which  │                                                        │        │
+│ I guess I haven't been making her feel that way lately. │                                                        │        │
+│ We cried, we talked about everything, we had great sex, │                                                        │        │
+│ and I stayed over at her house just to sleep with her   │                                                        │        │
+│ and then snuck out in the morning so her parents        │                                                        │        │
+│ wouldn't know.                                          │                                                        │        │
+│                                                         │                                                        │        │
+│ We both obviously want to work things out but aren't    │                                                        │        │
+│ sure if we should. I love this girl, but the more I     │                                                        │        │
+│ think about it, all I can think about is her cheating   │                                                        │        │
+│ on me, and more importantly, liking it. It makes me     │                                                        │        │
+│ sick to my stomach. Should I even try to fix it or      │                                                        │        │
+│ would I be better off cutting all ties.                 │                                                        │        │
+│ TL;DR:                                                  │                                                        │        │
+└─────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────┴────────┘
+[losses/total_loss: -0.20 | losses/policy_loss: -0.21 | losses/value_loss: 0.07]:   0%|     | 3/3200 [00:02<47:14,  1.13it/s]
+[2023-04-11 08:30:25,034] [INFO] [loss_scaler.py:180:update_scale] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 65536, but hysteresis is 2. Reducing hysteresis to 1
+[2023-04-11 08:30:25,920] [INFO] [loss_scaler.py:173:update_scale] [deepspeed] OVERFLOW! Rank 0 Skipping step. Attempted loss scale: 65536, reducing to 32768
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[losses/total_loss: -0.10 | losses/policy_loss: -0.12 | losses/value_loss: 0.06]:   1%|  | 21/3200 [00:32<1:15:27,  1.42s/it]
+
+
+
+
+
+
+
+
+
+[losses/total_loss: 0.04 | losses/policy_loss: 0.02 | losses/value_loss: 0.08]:   1%|    | 32/3200 [00:50<1:26:49,  1.64s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[losses/total_loss: -0.36 | losses/policy_loss: -0.37 | losses/value_loss: 0.06]:   2%|  | 64/3200 [01:42<1:27:28,  1.67s/it][RANK 0] Collecting rollouts
+
+
+
+
+[rollout 64 / 64]: 100%|█████████████████████████████████████████████████████████████████████| 64/64 [02:23<00:00,  2.24s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[losses/total_loss: -0.10 | losses/policy_loss: -0.12 | losses/value_loss: 0.11]:   3%|  | 99/3200 [05:04<1:25:30,  1.65s/it]
+[2023-04-11 08:35:30,020] [INFO] [logging.py:93:log_dist] [Rank 0] [Torch] Checkpoint pytorch_model is about to be saved!
+[2023-04-11 08:35:30,026] [INFO] [logging.py:93:log_dist] [Rank 0] Saving model checkpoint: ckpts/checkpoint_0100/pytorch_model/mp_rank_00_model_states.pt
+[losses/total_loss: -0.10 | losses/policy_loss: -0.12 | losses/value_loss: 0.11]:   3%|  | 99/3200 [05:04<1:25:30,  1.65s/it]/home/ec2-user/venv/lib64/python3.7/site-packages/torch/nn/modules/module.py:1433: UserWarning: Positional args are being deprecated, use kwargs instead. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  "Positional args are being deprecated, use kwargs instead. Refer to "
+[2023-04-11 08:35:32,217] [INFO] [torch_checkpoint_engine.py:19:save] [Torch] Saved ckpts/checkpoint_0100/pytorch_model/mp_rank_00_model_states.pt.
+[2023-04-11 08:35:32,219] [INFO] [torch_checkpoint_engine.py:17:save] [Torch] Saving ckpts/checkpoint_0100/pytorch_model/zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[RANK 0] Evaluating model
+[generation sweep 0/1 | eval batch 0/9]:   0%|                                                         | 0/9 [00:00<?, ?it/s]
+[2023-04-11 08:35:33,581] [INFO] [torch_checkpoint_engine.py:19:save] [Torch] Saved ckpts/checkpoint_0100/pytorch_model/zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2023-04-11 08:35:33,581] [INFO] [engine.py:3430:_save_zero_checkpoint] zero checkpoint saved ckpts/checkpoint_0100/pytorch_model/zero_pp_rank_0_mp_rank_00_optim_states.pt
+
+
+
+
+
+
+
+
+[generation sweep 1/1 | eval batch 9/9]: 100%|█████████████████████████████████████████████████| 9/9 [01:00<00:00,  6.72s/it]
+[RANK 0] Computing rewards
+[RANK 0] Summarizing evaluation
+[RANK 0] Saving the best state so far into ckpts/best_checkpoint
+[3m                                              Evaluation #1 reward/mean: 0.0358                                              
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┓
+┃[1m prompt                                                  [22m┃[1m output                                                 [22m┃[1m reward [22m┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━┩
+│ SUBREDDIT: r/AskReddit                                  │  I have feelings for a friend, and I can't get them    │ 0.869  │
+│ TITLE: How do you get someone out of your head?         │ out of my head. How do I get them out?                 │        │
+│ POST: Hi,                                               │                                                        │        │
+│ I'm 22, and I have been with my girlfriend for 5 years  │                                                        │        │
+│ now. We recently moved together. We've always loved     │                                                        │        │
+│ each other intensely.                                   │                                                        │        │
+│                                                         │                                                        │        │
+│ Problem, I recently started to have feelings for an     │                                                        │        │
+│ other person (a friend). This person has had a          │                                                        │        │
+│ boyfriend for now 3 years, and has absolutely no ideas. │                                                        │        │
+│ Those feelings were so strong, it was hard to hide      │                                                        │        │
+│ them. After 2 months of me being distant and really     │                                                        │        │
+│ sad, my girlfriend forced me to say what was bothering  │                                                        │        │
+│ me. I'm not a good liar, and now she knows.             │                                                        │        │
+│                                                         │                                                        │        │
+│ We decided to give us a week alone, I went to my        │                                                        │        │
+│ parents.                                                │                                                        │        │
+│                                                         │                                                        │        │
+│ Now, I'm completely lost. I keep on thinking about this │                                                        │        │
+│ person, and I hate that. I would like for those         │                                                        │        │
+│ feelings to go away, to leave me alone. But I can't.    │                                                        │        │
+│                                                         │                                                        │        │
+│ What do I do? It's been 3 months now, and I'm just      │                                                        │        │
+│ desperate.                                              │                                                        │        │
+│ TL;DR:                                                  │                                                        │        │
+├─────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────┼────────┤
+│ SUBREDDIT: r/pettyrevenge                               │  Mom woke me up with a loud TV, I turned it down, she  │ -0.133 │
+│ TITLE: So, my mom woke me up with a loud TV.            │ didn't like it, so I turned it up.                     │        │
+│ POST: She was in her living room, watching TV. This was │                                                        │        │
+│ at about 8:30 in the morning, and she was exercising.   │                                                        │        │
+│ She turned the TV up extra loud to hear it over her     │                                                        │        │
+│ excercycle, and woke me up. I went in there asking for  │                                                        │        │
+│ her to turn it down. She said she didn't have to; I     │                                                        │        │
+│ explained that I always used headphones so she didn't   │                                                        │        │
+│ have to deal with my noise and that she should give me  │                                                        │        │
+│ a little more respect, given that I paid rent at the    │                                                        │        │
+│ time.                                                   │                                                        │        │
+│                                                         │                                                        │        │
+│ She disagreed. I went back to my room, rather pissed    │                                                        │        │
+│ off at the lack of equality. I had no lock on my door;  │                                                        │        │
+│ but I had a dresser right next to it, so I pulled one   │                                                        │        │
+│ of the drawers out enough so that it caused the door to │                                                        │        │
+│ not be openable. Then, I turned my speakers up really   │                                                        │        │
+│ loud and blasted Gangnam Style on repeat, with the bass │                                                        │        │
+│ cranked up as high as it could go.                      │                                                        │        │
+│                                                         │                                                        │        │
+│ If you hate Gangnam Style for being overplayed, you     │                                                        │        │
+│ will see why I chose that particular song. I personally │                                                        │        │
+│ don't mind it. But here's the thing about my bass; it   │                                                        │        │
+│ vibrates the walls, making one hell of a lot of noise.  │                                                        │        │
+│ Needless to say, my mom was not pleased and shut off    │                                                        │        │
+│ the internet. But it was oh so worth it.                │                                                        │        │
+│ TL;DR:                                                  │                                                        │        │
+├─────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────┼────────┤
+│ SUBREDDIT: r/relationships                              │  Girlfriend cheated on me by kissing two guys at a     │ 0.371  │
+│ TITLE: My girlfriend (20f) of two years cheated on me   │ Halloween party. I'm trying to fix it, but I'm not     │        │
+│ (20m) by kissing two guys at a Halloween party.         │ sure if I should even try.                             │        │
+│ POST: Lately her and I have been having a few problems, │                                                        │        │
+│ and these problems have been brought up before a few    │                                                        │        │
+│ times. One problem being that I don't show enough       │                                                        │        │
+│ affection. I don't tell her she's pretty very often or  │                                                        │        │
+│ don't compliment her much. I feel terrible about it,    │                                                        │        │
+│ but this time I was really trying to change for her.    │                                                        │        │
+│                                                         │                                                        │        │
+│ For Halloween she went to visit her step brother at a   │                                                        │        │
+│ college and I got drunk with my friends and watched     │                                                        │        │
+│ movies. Last night (11/1) we got in a huge fight about  │                                                        │        │
+│ me not changing and how our relationship won't work out │                                                        │        │
+│ and basically broke up over the phone. So in an effort  │                                                        │        │
+│ to try and fix it I drove to her house. She told me how │                                                        │        │
+│ at the parties she went to that two guys kissed her.    │                                                        │        │
+│ The first one she pushed away, but the second one I     │                                                        │        │
+│ asked her if she kissed him back and she said yes and   │                                                        │        │
+│ that she did it because it made her feel wanted, which  │                                                        │        │
+│ I guess I haven't been making her feel that way lately. │                                                        │        │
+│ We cried, we talked about everything, we had great sex, │                                                        │        │
+│ and I stayed over at her house just to sleep with her   │                                                        │        │
+│ and then snuck out in the morning so her parents        │                                                        │        │
+│ wouldn't know.                                          │                                                        │        │
+│                                                         │                                                        │        │
+│ We both obviously want to work things out but aren't    │                                                        │        │
+│ sure if we should. I love this girl, but the more I     │                                                        │        │
+│ think about it, all I can think about is her cheating   │                                                        │        │
+│ on me, and more importantly, liking it. It makes me     │                                                        │        │
+│ sick to my stomach. Should I even try to fix it or      │                                                        │        │
+│ would I be better off cutting all ties.                 │                                                        │        │
+│ TL;DR:                                                  │                                                        │        │
+└─────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────┴────────┘
+[2023-04-11 08:36:37,620] [INFO] [logging.py:93:log_dist] [Rank 0] [Torch] Checkpoint pytorch_model is about to be saved!
+[2023-04-11 08:36:37,625] [INFO] [logging.py:93:log_dist] [Rank 0] Saving model checkpoint: ckpts/best_checkpoint/pytorch_model/mp_rank_00_model_states.pt
+[2023-04-11 08:36:37,625] [INFO] [torch_checkpoint_engine.py:17:save] [Torch] Saving ckpts/best_checkpoint/pytorch_model/mp_rank_00_model_states.pt...
+[2023-04-11 08:36:39,781] [INFO] [torch_checkpoint_engine.py:19:save] [Torch] Saved ckpts/best_checkpoint/pytorch_model/mp_rank_00_model_states.pt.
+[2023-04-11 08:36:39,782] [INFO] [torch_checkpoint_engine.py:17:save] [Torch] Saving ckpts/best_checkpoint/pytorch_model/zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[losses/total_loss: -0.11 | losses/policy_loss: -0.13 | losses/value_loss: 0.10]:   3%| | 100/3200 [06:17<19:48:06, 23.00s/it
+[2023-04-11 08:36:41,157] [INFO] [torch_checkpoint_engine.py:19:save] [Torch] Saved ckpts/best_checkpoint/pytorch_model/zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2023-04-11 08:36:41,158] [INFO] [engine.py:3430:_save_zero_checkpoint] zero checkpoint saved ckpts/best_checkpoint/pytorch_model/zero_pp_rank_0_mp_rank_00_optim_states.pt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[losses/total_loss: -0.82 | losses/policy_loss: -0.86 | losses/value_loss: 0.18]:   4%| | 127/3200 [07:01<1:13:09,  1.43s/it]
+[losses/total_loss: -0.82 | losses/policy_loss: -0.86 | losses/value_loss: 0.18]:   4%| | 128/3200 [07:02<1:16:39,  1.50s/it][RANK 0] Collecting rollouts
+
+
+
+
+[rollout 64 / 64]: 100%|█████████████████████████████████████████████████████████████████████| 64/64 [02:24<00:00,  2.26s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[losses/total_loss: 0.24 | losses/policy_loss: 0.23 | losses/value_loss: 0.04]:   6%|▏  | 192/3200 [11:18<1:26:39,  1.73s/it][RANK 0] Collecting rollouts
+[rollout 0 / 64]:   0%|                                                                               | 0/64 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "trlx_gptneo_text_summarization.py", line 183, in <module>
+    config=config,
+  File "/home/ec2-user/rlhf/trlx/summarize_rlhf/trlx/trlx.py", line 122, in train
+    trainer.learn()
+  File "/home/ec2-user/rlhf/trlx/summarize_rlhf/trlx/trainer/accelerate_base_trainer.py", line 594, in learn
+    self.post_epoch_callback()
+  File "/home/ec2-user/rlhf/trlx/summarize_rlhf/trlx/trainer/accelerate_ppo_trainer.py", line 231, in post_epoch_callback
+    self.make_experience(self.config.method.num_rollouts, self.iter_count)
+  File "/home/ec2-user/rlhf/trlx/summarize_rlhf/trlx/trainer/accelerate_ppo_trainer.py", line 312, in make_experience
+    outputs=all_str_outputs,
+  File "trlx_gptneo_text_summarization.py", line 149, in reward_fn
+    original_samples = [text + post_summary_dict[text.strip()] for text in original_samples]
+  File "trlx_gptneo_text_summarization.py", line 149, in <listcomp>
+    original_samples = [text + post_summary_dict[text.strip()] for text in original_samples]
+KeyError: "SUBREDDIT: r/tifu\nTITLE: TIFU by refusing a handy j while driving a Mclaren P1\nPOST: The other day I was playing Forza 5 downstairs in my man cave, and my wife came down to see what I was doing.  She started one of her favorite practices of trying to divert my attention from video games by performing sexual acts on me, as I was in the heat of a moment chasing a rival car around the Nurburgring, and largely ignoring her.\n\nSome info on my racing setup:  I use the Thrustmaster (giggity) TX 458 Italia racing wheel for the Xbone (I'm not even trying to make these puns).  Ive been putting off getting a racing seat to mount my wheel/pedals on for a while for whatever reason, so I have the wheel mounted to the end of a jank walmart folding table, and just stick the pedals underneath.  The folding table is longer than it is wide so I sometimes have to put a weight at the end of it to counterbalance the weight of the mounted wheel.  Today I hadn't done that.  Call it destiny.\n\nA few moments later, as I closed in on a sub 7 minute lap time, man sausage fully removed from my shorts and extended, as if it were trying to see the TV to see if I could beat the rival time, wife gives up in frustration that I didn't stop playing and jerks the wheel hard right as she leaves, flinging $1.15 million of British Engineering into the wall at 120 mph.  Several things happened in the next second-  First, I saw my new PR lap time disappear and the rival ghost car fly past me, Second, I threw my hands up in the air and looked at my wife and had the words 'what the hell' halfway out of my mouth, Third, the incredible brushless motors inside the steering wheel sprung to life to give me some awesome force feedback, Fourth, physics broke.\n\nThe force feedback on the Thrustmaster TX is absolutely FANTASTIC- but when you arent actually holding the wheel it goes absolutely crazy shaking.  When the wheel started shaking, without the weight on the table to counterbalance it, the wheel tipped over into my lap, slamming right into the top of my'short shifter' if you will.  Unpleasant\nTL;DR:"
+[31m╭─────────────────────────────── [39m[1mTraceback (most recent call last)[31m[22m ────────────────────────────────╮
+[31m│[39m /home/ec2-user/rlhf/trlx/summarize_rlhf/[1mtrlx_gptneo_text_summarization.py[22m:[94m183[39m in [92m<module>[39m        [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   180 │   │   reward_fn=reward_fn,                                                               [31m│
+[31m│[39m   181 │   │   prompts=train_prompts,                                                             [31m│
+[31m│[39m   182 │   │   eval_prompts=val_prompts[[94m0[39m:[94m100[39m],  # sampling 100 validation prompts for evaluati   [31m│
+[31m│[39m [31m❱ [39m183 │   │   config=config,                                                                     [31m│
+[31m│[39m   184 │   )                                                                                      [31m│
+[31m│[39m   185                                                                                            [31m│
+[31m│[39m   186                                                                                            [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ec2-user/rlhf/trlx/summarize_rlhf/trlx/[1mtrlx.py[22m:[94m122[39m in [92mtrain[39m                                [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   119 │   eval_pipeline = get_pipeline(config.train.pipeline)(eval_prompts, max_prompt_length,   [31m│
+[31m│[39m   120 │   trainer.add_eval_pipeline(eval_pipeline)                                               [31m│
+[31m│[39m   121 │                                                                                          [31m│
+[31m│[39m [31m❱ [39m122 │   trainer.learn()                                                                        [31m│
+[31m│[39m   123 │   [94mreturn[39m trainer                                                                         [31m│
+[31m│[39m   124                                                                                            [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ec2-user/rlhf/trlx/summarize_rlhf/trlx/trainer/[1maccelerate_base_trainer.py[22m:[94m594[39m in [92mlearn[39m     [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   591 │   │   │   │                                                                              [31m│
+[31m│[39m   592 │   │   │   │   [96mself[39m.post_backward_callback()                                              [31m│
+[31m│[39m   593 │   │   │                                                                                  [31m│
+[31m│[39m [31m❱ [39m594 │   │   │   [96mself[39m.post_epoch_callback()                                                     [31m│
+[31m│[39m   595 │   │   tbar.close()                                                                       [31m│
+[31m│[39m   596 │                                                                                          [31m│
+[31m│[39m   597 │   [1m@abstractmethod[22m                                                                        [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ec2-user/rlhf/trlx/summarize_rlhf/trlx/trainer/[1maccelerate_ppo_trainer.py[22m:[94m231[39m in            [31m│
+[31m│[39m [92mpost_epoch_callback[39m                                                                              [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   228 │   │   │   [96mself[39m.store.export_history(location=[96mself[39m.rollout_logging_dir)                   [31m│
+[31m│[39m   229 │   │   [96mself[39m.store.clear_history()                                                         [31m│
+[31m│[39m   230 │   │   # Collect more rollouts for training                                               [31m│
+[31m│[39m [31m❱ [39m231 │   │   [96mself[39m.make_experience([96mself[39m.config.method.num_rollouts, [96mself[39m.iter_count)             [31m│
+[31m│[39m   232 │                                                                                          [31m│
+[31m│[39m   233 │   [94mdef[39m [92mpost_backward_callback[39m([96mself[39m):                                                      [31m│
+[31m│[39m   234 │   │   [96mself[39m.kl_ctl.update([96mself[39m.mean_kl.item(), n_steps=[96mself[39m.config.train.batch_size)      [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ec2-user/rlhf/trlx/summarize_rlhf/trlx/trainer/[1maccelerate_ppo_trainer.py[22m:[94m312[39m in            [31m│
+[31m│[39m [92mmake_experience[39m                                                                                  [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   309 │   │   │   │   │   [96mself[39m.reward_fn(                                                        [31m│
+[31m│[39m   310 │   │   │   │   │   │   samples=all_str_samples,                                           [31m│
+[31m│[39m   311 │   │   │   │   │   │   prompts=all_str_prompts,                                           [31m│
+[31m│[39m [31m❱ [39m312 │   │   │   │   │   │   outputs=all_str_outputs,                                           [31m│
+[31m│[39m   313 │   │   │   │   │   ),                                                                     [31m│
+[31m│[39m   314 │   │   │   │   │   dtype=torch.float,                                                     [31m│
+[31m│[39m   315 │   │   │   │   │   device=device,                                                         [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ec2-user/rlhf/trlx/summarize_rlhf/[1mtrlx_gptneo_text_summarization.py[22m:[94m149[39m in [92mreward_fn[39m       [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   146 │                                                                                          [31m│
+[31m│[39m   147 │   [94mdef[39m [92mreward_fn[39m(samples: List[[96mstr[39m], **kwargs):                                           [31m│
+[31m│[39m   148 │   │   original_samples = [text.split([33m"TL;DR:"[39m)[[94m0[39m] + [33m"TL;DR: "[39m [94mfor[39m text [95min[39m samples]       [31m│
+[31m│[39m [31m❱ [39m149 │   │   original_samples = [text + post_summary_dict[text.strip()] [94mfor[39m text [95min[39m original_   [31m│
+[31m│[39m   150 │   │   original_scores = get_scores(original_samples)                                     [31m│
+[31m│[39m   151 │   │   scores = get_scores(samples)                                                       [31m│
+[31m│[39m   152 │   │   norms_scores = scores - original_scores                                            [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ec2-user/rlhf/trlx/summarize_rlhf/[1mtrlx_gptneo_text_summarization.py[22m:[94m149[39m in [92m<listcomp>[39m      [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   146 │                                                                                          [31m│
+[31m│[39m   147 │   [94mdef[39m [92mreward_fn[39m(samples: List[[96mstr[39m], **kwargs):                                           [31m│
+[31m│[39m   148 │   │   original_samples = [text.split([33m"TL;DR:"[39m)[[94m0[39m] + [33m"TL;DR: "[39m [94mfor[39m text [95min[39m samples]       [31m│
+[31m│[39m [31m❱ [39m149 │   │   original_samples = [text + post_summary_dict[text.strip()] [94mfor[39m text [95min[39m original_   [31m│
+[31m│[39m   150 │   │   original_scores = get_scores(original_samples)                                     [31m│
+[31m│[39m   151 │   │   scores = get_scores(samples)                                                       [31m│
+[31m│[39m   152 │   │   norms_scores = scores - original_scores                                            [31m│
+[31m╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+[1mKeyError: [32m[22m"SUBREDDIT: r/tifu\nTITLE: TIFU by refusing a handy j while driving a Mclaren P1\nPOST: The other day I was playing
+[32mForza 5 downstairs in my man cave, and my wife came down to see what I was doing.  She started one of her favorite practices 
+[32mof trying to divert my attention from video games by performing sexual acts on me, as I was in the heat of a moment chasing a
+[32mrival car around the Nurburgring, and largely ignoring her.\n\nSome info on my racing setup:  I use the Thrustmaster 
+[32m(giggity) TX 458 Italia racing wheel for the Xbone (I'm not even trying to make these puns).  Ive been putting off getting a 
+[32mracing seat to mount my wheel/pedals on for a while for whatever reason, so I have the wheel mounted to the end of a jank 
+[32mwalmart folding table, and just stick the pedals underneath.  The folding table is longer than it is wide so I sometimes have
+[32mto put a weight at the end of it to counterbalance the weight of the mounted wheel.  Today I hadn't done that.  Call it 
+[32mdestiny.\n\nA few moments later, as I closed in on a sub 7 minute lap time, man sausage fully removed from my shorts and 
+[32mextended, as if it were trying to see the TV to see if I could beat the rival time, wife gives up in frustration that I 
+[32mdidn't stop playing and jerks the wheel hard right as she leaves, flinging $1.15 million of British Engineering into the wall
+[32mat 120 mph.  Several things happened in the next second-  First, I saw my new PR lap time disappear and the rival ghost car 
+[32mfly past me, Second, I threw my hands up in the air and looked at my wife and had the words 'what the hell' halfway out of my
+[32mmouth, Third, the incredible brushless motors inside the steering wheel sprung to life to give me some awesome force 
+[32mfeedback, Fourth, physics broke.\n\nThe force feedback on the Thrustmaster TX is absolutely FANTASTIC- but when you arent 
+[32mactually holding the wheel it goes absolutely crazy shaking.  When the wheel started shaking, without the weight on the table
+[32mto counterbalance it, the wheel tipped over into my lap, slamming right into the top of my'short shifter' if you will.  
+[32mUnpleasant\nTL;DR:"

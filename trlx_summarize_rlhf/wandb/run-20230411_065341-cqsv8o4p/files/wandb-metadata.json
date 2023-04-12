@@ -1,0 +1,297 @@
+{
+    "os": "Linux-4.14.305-227.531.amzn2.x86_64-x86_64-with-glibc2.2.5",
+    "python": "3.7.16",
+    "heartbeatAt": "2023-04-11T06:53:41.873025",
+    "startedAt": "2023-04-11T06:53:41.115571",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "trlx_gptneo_text_summarization.py",
+    "codePath": "summarize_rlhf/trlx_gptneo_text_summarization.py",
+    "git": {
+        "remote": "https://github.com/CarperAI/trlx.git",
+        "commit": "565c3163befa5e7a083bbeb2038889b766599b44"
+    },
+    "email": null,
+    "root": "/home/ec2-user/rlhf/trlx",
+    "host": "ip-172-31-7-50.ap-northeast-1.compute.internal",
+    "username": "ec2-user",
+    "executable": "/home/ec2-user/venv/bin/python3",
+    "cpu_count": 24,
+    "cpu_count_logical": 48,
+    "cpu_freq": {
+        "current": 2389.0709375,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1879.772,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1814.954,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2085.271,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2034.116,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1823.191,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1888.201,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2122.843,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2233.115,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3187.533,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1988.189,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2195.188,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2691.861,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1744.484,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2048.931,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2109.39,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2347.341,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2375.522,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3290.723,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3226.275,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2126.831,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2455.929,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3191.401,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2342.893,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1927.294,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2403.875,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2038.625,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2594.92,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2524.449,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2095.345,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2345.056,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2478.802,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2366.116,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3259.27,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2319.907,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2597.217,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2995.581,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1773.685,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2298.64,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2433.811,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2626.46,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2395.495,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3221.437,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3224.316,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2330.535,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2501.33,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2824.904,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2043.593,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1850.788,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "total": 511.9882621765137,
+        "used": 226.42146682739258
+    },
+    "gpu": "NVIDIA A10G",
+    "gpu_count": 4,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA A10G",
+            "memory_total": 24146608128
+        },
+        {
+            "name": "NVIDIA A10G",
+            "memory_total": 24146608128
+        },
+        {
+            "name": "NVIDIA A10G",
+            "memory_total": 24146608128
+        },
+        {
+            "name": "NVIDIA A10G",
+            "memory_total": 24146608128
+        }
+    ],
+    "memory": {
+        "total": 186.9207534790039
+    }
+}

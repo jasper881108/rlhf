@@ -1,0 +1,49 @@
+2023-04-11 06:49:56,513 INFO    StreamThr :369 [internal.py:wandb_internal():89] W&B internal server running at pid: 369, started at: 2023-04-11 06:49:56.512504
+2023-04-11 06:49:56,516 DEBUG   HandlerThread:369 [handler.py:handle_request():144] handle_request: status
+2023-04-11 06:49:56,517 INFO    WriterThread:369 [datastore.py:open_for_write():85] open: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_064956-itbaudss/run-itbaudss.wandb
+2023-04-11 06:49:56,517 DEBUG   SenderThread:369 [sender.py:send():375] send: header
+2023-04-11 06:49:56,691 DEBUG   SenderThread:369 [sender.py:send():375] send: run
+2023-04-11 06:49:57,037 ERROR   SenderThread:369 [internal_api.py:execute():288] 401 response executing GraphQL.
+2023-04-11 06:49:57,037 ERROR   SenderThread:369 [internal_api.py:execute():289] {"errors":[{"message":"user is not logged in","path":["upsertBucket"],"extensions":{"code":"PERMISSION_ERROR"}}],"data":{"upsertBucket":null}}
+2023-04-11 06:49:57,037 ERROR   SenderThread:369 [sender.py:send_run():979] The API key is either invalid or missing, or the host is incorrect. To resolve this issue, you may try running the 'wandb login --host [hostname]' command. The host defaults to 'https://api.wandb.ai' if not specified. (Error 401: Unauthorized)
+Traceback (most recent call last):
+  File "/home/ec2-user/venv/lib64/python3.7/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/ec2-user/venv/lib64/python3.7/site-packages/wandb/sdk/internal/internal_api.py", line 285, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/home/ec2-user/venv/lib64/python3.7/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/ec2-user/venv/lib64/python3.7/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/ec2-user/venv/lib64/python3.7/site-packages/wandb/sdk/lib/gql_request.py", line 56, in execute
+    request.raise_for_status()
+  File "/home/ec2-user/venv/lib64/python3.7/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/venv/lib64/python3.7/site-packages/wandb/sdk/internal/sender.py", line 977, in send_run
+    self._init_run(run, config_value_dict)
+  File "/home/ec2-user/venv/lib64/python3.7/site-packages/wandb/sdk/internal/sender.py", line 1029, in _init_run
+    commit=run.git.commit or None,
+  File "/home/ec2-user/venv/lib64/python3.7/site-packages/wandb/apis/normalize.py", line 73, in wrapper
+    raise err
+  File "/home/ec2-user/venv/lib64/python3.7/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ec2-user/venv/lib64/python3.7/site-packages/wandb/sdk/internal/internal_api.py", line 1694, in upsert_run
+    **kwargs,
+  File "/home/ec2-user/venv/lib64/python3.7/site-packages/wandb/sdk/internal/internal_api.py", line 260, in gql
+    **kwargs,
+  File "/home/ec2-user/venv/lib64/python3.7/site-packages/wandb/sdk/lib/retry.py", line 147, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+  File "/home/ec2-user/venv/lib64/python3.7/site-packages/wandb/util.py", line 950, in check_retry_fn
+    return fallback_retry_fn(e)
+  File "/home/ec2-user/venv/lib64/python3.7/site-packages/wandb/util.py", line 884, in no_retry_auth
+    "The API key is either invalid or missing, or the host is incorrect. "
+wandb.errors.AuthenticationError: The API key is either invalid or missing, or the host is incorrect. To resolve this issue, you may try running the 'wandb login --host [hostname]' command. The host defaults to 'https://api.wandb.ai' if not specified. (Error 401: Unauthorized)
+2023-04-11 06:49:57,694 DEBUG   HandlerThread:369 [handler.py:handle_request():144] handle_request: shutdown
+2023-04-11 06:49:57,694 INFO    HandlerThread:369 [handler.py:finish():845] shutting down handler
+2023-04-11 06:49:58,040 INFO    SenderThread:369 [sender.py:finish():1550] shutting down sender
+2023-04-11 06:49:58,692 INFO    WriterThread:369 [datastore.py:close():298] close: /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_064956-itbaudss/run-itbaudss.wandb

@@ -1,0 +1,27 @@
+2023-04-11 06:49:56,505 INFO    MainThread:48750 [wandb_setup.py:_flush():76] Configure stats pid to 48750
+2023-04-11 06:49:56,505 INFO    MainThread:48750 [wandb_setup.py:_flush():76] Loading settings from /home/ec2-user/.config/wandb/settings
+2023-04-11 06:49:56,505 INFO    MainThread:48750 [wandb_setup.py:_flush():76] Loading settings from /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/settings
+2023-04-11 06:49:56,505 INFO    MainThread:48750 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-04-11 06:49:56,505 INFO    MainThread:48750 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-04-11 06:49:56,505 INFO    MainThread:48750 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'summarize_rlhf/trlx_gptneo_text_summarization.py', 'program': 'trlx_gptneo_text_summarization.py'}
+2023-04-11 06:49:56,506 INFO    MainThread:48750 [wandb_setup.py:_flush():76] Applying login settings: {'mode': 'offline'}
+2023-04-11 06:49:56,506 INFO    MainThread:48750 [wandb_init.py:_log_setup():507] Logging user logs to /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_064956-itbaudss/logs/debug.log
+2023-04-11 06:49:56,506 INFO    MainThread:48750 [wandb_init.py:_log_setup():508] Logging internal logs to /home/ec2-user/rlhf/trlx/summarize_rlhf/wandb/run-20230411_064956-itbaudss/logs/debug-internal.log
+2023-04-11 06:49:56,506 INFO    MainThread:48750 [wandb_init.py:init():547] calling init triggers
+2023-04-11 06:49:56,506 INFO    MainThread:48750 [wandb_init.py:init():555] wandb.init called with sweep_config: {}
+config: {}
+2023-04-11 06:49:56,506 INFO    MainThread:48750 [wandb_init.py:init():595] starting backend
+2023-04-11 06:49:56,506 INFO    MainThread:48750 [wandb_init.py:init():599] setting up manager
+2023-04-11 06:49:56,509 INFO    MainThread:48750 [backend.py:_multiprocessing_setup():108] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-04-11 06:49:56,511 INFO    MainThread:48750 [wandb_init.py:init():605] backend started and connected
+2023-04-11 06:49:56,513 INFO    MainThread:48750 [wandb_init.py:init():695] updated telemetry
+2023-04-11 06:49:56,690 INFO    MainThread:48750 [wandb_init.py:init():732] communicating run to backend with 60.0 second timeout
+2023-04-11 06:49:57,040 ERROR   MainThread:48750 [wandb_init.py:init():758] encountered error: The API key is either invalid or missing, or the host is incorrect. To resolve this issue, you may try running the 'wandb login --host [hostname]' command. The host defaults to 'https://api.wandb.ai' if not specified. (Error 401: Unauthorized)
+2023-04-11 06:49:57,076 ERROR   MainThread:48750 [wandb_init.py:init():1163] The API key is either invalid or missing, or the host is incorrect. To resolve this issue, you may try running the 'wandb login --host [hostname]' command. The host defaults to 'https://api.wandb.ai' if not specified. (Error 401: Unauthorized)
+Traceback (most recent call last):
+  File "/home/ec2-user/venv/lib64/python3.7/site-packages/wandb/sdk/wandb_init.py", line 1145, in init
+    run = wi.init()
+  File "/home/ec2-user/venv/lib64/python3.7/site-packages/wandb/sdk/wandb_init.py", line 764, in init
+    raise error
+wandb.errors.AuthenticationError: The API key is either invalid or missing, or the host is incorrect. To resolve this issue, you may try running the 'wandb login --host [hostname]' command. The host defaults to 'https://api.wandb.ai' if not specified. (Error 401: Unauthorized)
+2023-04-11 06:49:58,695 WARNING MsgRouterThr:48750 [router.py:message_loop():77] message_loop has been closed

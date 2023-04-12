@@ -1,0 +1,497 @@
+Using /home/ec2-user/.cache/torch_extensions/py37_cu117 as PyTorch extensions root...
+Detected CUDA files, patching ldflags
+Emitting ninja build file /home/ec2-user/.cache/torch_extensions/py37_cu117/cpu_adam/build.ninja...
+Building extension module cpu_adam...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+Loading extension module cpu_adam...
+Time to load cpu_adam op: 1.5217580795288086 seconds
+[2023-04-11 07:09:38,659] [INFO] [logging.py:93:log_dist] [Rank -1] DeepSpeed info: version=0.8.3, git-hash=unknown, git-branch=unknown
+[2023-04-11 07:09:41,057] [INFO] [logging.py:93:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+[2023-04-11 07:09:41,059] [INFO] [logging.py:93:log_dist] [Rank 0] Removing param_group that has no 'params' in the client Optimizer
+[2023-04-11 07:09:41,059] [INFO] [logging.py:93:log_dist] [Rank 0] Using client Optimizer as basic optimizer
+[2023-04-11 07:09:41,095] [INFO] [logging.py:93:log_dist] [Rank 0] DeepSpeed Basic Optimizer = DeepSpeedCPUAdam
+[2023-04-11 07:09:41,095] [INFO] [utils.py:56:is_zero_supported_optimizer] Checking ZeRO support for optimizer=DeepSpeedCPUAdam type=<class 'deepspeed.ops.adam.cpu_adam.DeepSpeedCPUAdam'>
+[2023-04-11 07:09:41,095] [INFO] [logging.py:93:log_dist] [Rank 0] Creating torch.float16 ZeRO stage 2 optimizer
+[2023-04-11 07:09:41,095] [INFO] [stage_1_and_2.py:144:__init__] Reduce bucket size 500000000
+[2023-04-11 07:09:41,095] [INFO] [stage_1_and_2.py:145:__init__] Allgather bucket size 500000000
+[2023-04-11 07:09:41,095] [INFO] [stage_1_and_2.py:146:__init__] CPU Offload: True
+[2023-04-11 07:09:41,096] [INFO] [stage_1_and_2.py:147:__init__] Round robin gradient partitioning: False
+Using /home/ec2-user/.cache/torch_extensions/py37_cu117 as PyTorch extensions root...
+Loading extension module utils...
+Time to load utils op: 0.6030075550079346 seconds
+Rank: 0 partition count [3] and sizes[(172779522, False)]
+[2023-04-11 07:09:43,861] [INFO] [utils.py:829:see_memory_usage] Before initializing optimizer states
+[2023-04-11 07:09:43,862] [INFO] [utils.py:834:see_memory_usage] MA 3.72 GB         Max_MA 3.72 GB         CA 3.97 GB         Max_CA 4 GB
+[2023-04-11 07:09:43,862] [INFO] [utils.py:839:see_memory_usage] CPU Virtual Memory:  used = 23.07 GB, percent = 12.3%
+[2023-04-11 07:09:45,138] [INFO] [utils.py:829:see_memory_usage] After initializing optimizer states
+[2023-04-11 07:09:45,139] [INFO] [utils.py:834:see_memory_usage] MA 3.72 GB         Max_MA 3.72 GB         CA 3.97 GB         Max_CA 4 GB
+[2023-04-11 07:09:45,139] [INFO] [utils.py:839:see_memory_usage] CPU Virtual Memory:  used = 29.22 GB, percent = 15.6%
+[2023-04-11 07:09:45,139] [INFO] [stage_1_and_2.py:520:__init__] optimizer state initialized
+[2023-04-11 07:09:45,233] [INFO] [utils.py:829:see_memory_usage] After initializing ZeRO optimizer
+[2023-04-11 07:09:45,234] [INFO] [utils.py:834:see_memory_usage] MA 3.72 GB         Max_MA 3.72 GB         CA 3.97 GB         Max_CA 4 GB
+[2023-04-11 07:09:45,234] [INFO] [utils.py:839:see_memory_usage] CPU Virtual Memory:  used = 29.26 GB, percent = 15.7%
+[2023-04-11 07:09:45,236] [INFO] [logging.py:93:log_dist] [Rank 0] DeepSpeed Final Optimizer = DeepSpeedCPUAdam
+[2023-04-11 07:09:45,236] [INFO] [logging.py:93:log_dist] [Rank 0] DeepSpeed using client LR scheduler
+[2023-04-11 07:09:45,236] [INFO] [logging.py:93:log_dist] [Rank 0] DeepSpeed LR Scheduler = None
+[2023-04-11 07:09:45,236] [INFO] [logging.py:93:log_dist] [Rank 0] step=0, skipped=0, lr=[5e-06], mom=[[0.9, 0.999]]
+[2023-04-11 07:09:45,238] [INFO] [config.py:1018:print] DeepSpeedEngine configuration:
+[2023-04-11 07:09:45,239] [INFO] [config.py:1022:print]   activation_checkpointing_config  {
+    "partition_activations": false,
+    "contiguous_memory_optimization": false,
+    "cpu_checkpointing": false,
+    "number_checkpoints": null,
+    "synchronize_checkpoint_boundary": false,
+    "profile": false
+}
+[2023-04-11 07:09:45,239] [INFO] [config.py:1022:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True}
+[2023-04-11 07:09:45,239] [INFO] [config.py:1022:print]   amp_enabled .................. False
+[2023-04-11 07:09:45,239] [INFO] [config.py:1022:print]   amp_params ................... False
+[2023-04-11 07:09:45,239] [INFO] [config.py:1022:print]   autotuning_config ............ {
+    "enabled": false,
+    "start_step": null,
+    "end_step": null,
+    "metric_path": null,
+    "arg_mappings": null,
+    "metric": "throughput",
+    "model_info": null,
+    "results_dir": "autotuning_results",
+    "exps_dir": "autotuning_exps",
+    "overwrite": true,
+    "fast": true,
+    "start_profile_step": 3,
+    "end_profile_step": 5,
+    "tuner_type": "gridsearch",
+    "tuner_early_stopping": 5,
+    "tuner_num_trials": 50,
+    "model_info_path": null,
+    "mp_size": 1,
+    "max_train_batch_size": null,
+    "min_train_batch_size": 1,
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03,
+    "min_train_micro_batch_size_per_gpu": 1,
+    "num_tuning_micro_batch_sizes": 3
+}
+[2023-04-11 07:09:45,239] [INFO] [config.py:1022:print]   bfloat16_enabled ............. False
+[2023-04-11 07:09:45,240] [INFO] [config.py:1022:print]   checkpoint_parallel_write_pipeline  False
+[2023-04-11 07:09:45,240] [INFO] [config.py:1022:print]   checkpoint_tag_validation_enabled  True
+[2023-04-11 07:09:45,240] [INFO] [config.py:1022:print]   checkpoint_tag_validation_fail  False
+[2023-04-11 07:09:45,240] [INFO] [config.py:1022:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7fa5b13f6310>
+[2023-04-11 07:09:45,240] [INFO] [config.py:1022:print]   communication_data_type ...... None
+[2023-04-11 07:09:45,240] [INFO] [config.py:1022:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2023-04-11 07:09:45,240] [INFO] [config.py:1022:print]   curriculum_enabled_legacy .... False
+[2023-04-11 07:09:45,240] [INFO] [config.py:1022:print]   curriculum_params_legacy ..... False
+[2023-04-11 07:09:45,240] [INFO] [config.py:1022:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2023-04-11 07:09:45,240] [INFO] [config.py:1022:print]   data_efficiency_enabled ...... False
+[2023-04-11 07:09:45,241] [INFO] [config.py:1022:print]   dataloader_drop_last ......... False
+[2023-04-11 07:09:45,241] [INFO] [config.py:1022:print]   disable_allgather ............ False
+[2023-04-11 07:09:45,241] [INFO] [config.py:1022:print]   dump_state ................... False
+[2023-04-11 07:09:45,241] [INFO] [config.py:1022:print]   dynamic_loss_scale_args ...... {'init_scale': 65536, 'scale_window': 1000, 'delayed_shift': 2, 'min_scale': 0.5}
+[2023-04-11 07:09:45,241] [INFO] [config.py:1022:print]   eigenvalue_enabled ........... False
+[2023-04-11 07:09:45,241] [INFO] [config.py:1022:print]   eigenvalue_gas_boundary_resolution  1
+[2023-04-11 07:09:45,241] [INFO] [config.py:1022:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2023-04-11 07:09:45,241] [INFO] [config.py:1022:print]   eigenvalue_layer_num ......... 0
+[2023-04-11 07:09:45,241] [INFO] [config.py:1022:print]   eigenvalue_max_iter .......... 100
+[2023-04-11 07:09:45,241] [INFO] [config.py:1022:print]   eigenvalue_stability ......... 1e-06
+[2023-04-11 07:09:45,242] [INFO] [config.py:1022:print]   eigenvalue_tol ............... 0.01
+[2023-04-11 07:09:45,242] [INFO] [config.py:1022:print]   eigenvalue_verbose ........... False
+[2023-04-11 07:09:45,242] [INFO] [config.py:1022:print]   elasticity_enabled ........... False
+[2023-04-11 07:09:45,242] [INFO] [config.py:1022:print]   flops_profiler_config ........ {
+    "enabled": false,
+    "profile_step": 1,
+    "module_depth": -1,
+    "top_modules": 1,
+    "detailed": true,
+    "output_file": null
+}
+[2023-04-11 07:09:45,242] [INFO] [config.py:1022:print]   fp16_auto_cast ............... False
+[2023-04-11 07:09:45,242] [INFO] [config.py:1022:print]   fp16_enabled ................. True
+[2023-04-11 07:09:45,242] [INFO] [config.py:1022:print]   fp16_master_weights_and_gradients  False
+[2023-04-11 07:09:45,242] [INFO] [config.py:1022:print]   global_rank .................. 0
+[2023-04-11 07:09:45,242] [INFO] [config.py:1022:print]   grad_accum_dtype ............. None
+[2023-04-11 07:09:45,242] [INFO] [config.py:1022:print]   gradient_accumulation_steps .. 1
+[2023-04-11 07:09:45,242] [INFO] [config.py:1022:print]   gradient_clipping ............ 0.0
+[2023-04-11 07:09:45,242] [INFO] [config.py:1022:print]   gradient_predivide_factor .... 1.0
+[2023-04-11 07:09:45,242] [INFO] [config.py:1022:print]   initial_dynamic_scale ........ 65536
+[2023-04-11 07:09:45,243] [INFO] [config.py:1022:print]   load_universal_checkpoint .... False
+[2023-04-11 07:09:45,243] [INFO] [config.py:1022:print]   loss_scale ................... 0
+[2023-04-11 07:09:45,243] [INFO] [config.py:1022:print]   memory_breakdown ............. False
+[2023-04-11 07:09:45,243] [INFO] [config.py:1022:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') enabled=False
+[2023-04-11 07:09:45,243] [INFO] [config.py:1022:print]   nebula_config ................ {
+    "enabled": false,
+    "persistent_storage_path": null,
+    "persistent_time_interval": 100,
+    "num_of_version_in_retention": 2,
+    "enable_nebula_load": true,
+    "load_path": null
+}
+[2023-04-11 07:09:45,243] [INFO] [config.py:1022:print]   optimizer_legacy_fusion ...... False
+[2023-04-11 07:09:45,243] [INFO] [config.py:1022:print]   optimizer_name ............... None
+[2023-04-11 07:09:45,243] [INFO] [config.py:1022:print]   optimizer_params ............. None
+[2023-04-11 07:09:45,243] [INFO] [config.py:1022:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0}
+[2023-04-11 07:09:45,243] [INFO] [config.py:1022:print]   pld_enabled .................. False
+[2023-04-11 07:09:45,243] [INFO] [config.py:1022:print]   pld_params ................... False
+[2023-04-11 07:09:45,243] [INFO] [config.py:1022:print]   prescale_gradients ........... False
+[2023-04-11 07:09:45,244] [INFO] [config.py:1022:print]   scheduler_name ............... None
+[2023-04-11 07:09:45,244] [INFO] [config.py:1022:print]   scheduler_params ............. None
+[2023-04-11 07:09:45,244] [INFO] [config.py:1022:print]   sparse_attention ............. None
+[2023-04-11 07:09:45,244] [INFO] [config.py:1022:print]   sparse_gradients_enabled ..... False
+[2023-04-11 07:09:45,244] [INFO] [config.py:1022:print]   steps_per_print .............. inf
+[2023-04-11 07:09:45,244] [INFO] [config.py:1022:print]   train_batch_size ............. 6
+[2023-04-11 07:09:45,244] [INFO] [config.py:1022:print]   train_micro_batch_size_per_gpu  2
+[2023-04-11 07:09:45,244] [INFO] [config.py:1022:print]   use_node_local_storage ....... False
+[2023-04-11 07:09:45,244] [INFO] [config.py:1022:print]   wall_clock_breakdown ......... False
+[2023-04-11 07:09:45,244] [INFO] [config.py:1022:print]   world_size ................... 3
+[2023-04-11 07:09:45,245] [INFO] [config.py:1022:print]   zero_allow_untested_optimizer  True
+[2023-04-11 07:09:45,245] [INFO] [config.py:1022:print]   zero_config .................. stage=2 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=500,000,000 allgather_partitions=True allgather_bucket_size=500000000 overlap_comm=False load_from_fp32_weights=True elastic_checkpoint=False offload_param=DeepSpeedZeroOffloadParamConfig(device='cpu', nvme_path=None, buffer_count=5, buffer_size=100,000,000, max_in_cpu=1,000,000,000, pin_memory=False) offload_optimizer=DeepSpeedZeroOffloadOptimizerConfig(device='cpu', nvme_path=None, buffer_count=4, pin_memory=False, pipeline=False, pipeline_read=False, pipeline_write=False, fast_init=False) sub_group_size=1,000,000,000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=50,000,000 param_persistence_threshold=100,000 model_persistence_threshold=sys.maxsize max_live_parameters=1,000,000,000 max_reuse_distance=1,000,000,000 gather_16bit_weights_on_model_save=False stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False
+[2023-04-11 07:09:45,245] [INFO] [config.py:1022:print]   zero_enabled ................. True
+[2023-04-11 07:09:45,245] [INFO] [config.py:1022:print]   zero_force_ds_cpu_optimizer .. True
+[2023-04-11 07:09:45,245] [INFO] [config.py:1022:print]   zero_optimization_stage ...... 2
+[2023-04-11 07:09:45,245] [INFO] [config.py:1013:print_user_config]   json = {
+    "train_micro_batch_size_per_gpu": 2,
+    "gradient_accumulation_steps": 1,
+    "fp16": {
+        "enabled": true,
+        "min_loss_scale": 0.5,
+        "fp16_scale_tolerance": 0.25,
+        "opt_level": "O2",
+        "auto_cast": false
+    },
+    "zero_optimization": {
+        "stage": 2,
+        "offload_param": {
+            "device": "cpu"
+        },
+        "offload_optimizer": {
+            "device": "cpu"
+        },
+        "allgather_partitions": true,
+        "allgather_bucket_size": 5.000000e+08,
+        "contiguous_gradients": true
+    },
+    "steps_per_print": inf,
+    "bf16": {
+        "enabled": false
+    },
+    "zero_allow_untested_optimizer": true
+}
+Time to load utils op: 0.0005345344543457031 seconds
+Using /home/ec2-user/.cache/torch_extensions/py37_cu117 as PyTorch extensions root...
+No modifications detected for re-loaded extension module utils, skipping build step...
+Loading extension module utils...
+[RANK 0] Collecting rollouts
+[rollout 0 / 128]:   0%|                                                                             | 0/128 [00:00<?, ?it/s]You're using a GPT2TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+/home/ec2-user/venv/lib64/python3.7/site-packages/transformers/generation/utils.py:1202: UserWarning: You have modified the pretrained model configuration to control generation. This is a deprecated strategy to control generation and will be removed soon, in a future version. Please use a generation configuration file (see https://huggingface.co/docs/transformers/main_classes/text_generation)
+  "You have modified the pretrained model configuration to control generation. This is a"
+/home/ec2-user/rlhf/trlx/summarize_rlhf/trlx/trainer/accelerate_ppo_trainer.py:315: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  device=device,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[rollout 128 / 128]: 100%|█████████████████████████████████████████████████████████████████| 128/128 [04:22<00:00,  2.05s/it]
+[RANK 0] Starting training
+[RANK 0] Evaluating model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[generation sweep 1/1 | eval batch 42/42]: 100%|█████████████████████████████████████████████| 42/42 [11:09<00:00, 15.95s/it]
+[RANK 0] Computing rewards
+/home/ec2-user/rlhf/trlx/summarize_rlhf/trlx/trainer/accelerate_base_trainer.py:380: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  dtype=float,
+[RANK 0] Summarizing evaluation
+[3m                                             Evaluation #0 reward/mean: -0.00585                                             
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┓
+┃[1m prompt                                                  [22m┃[1m output                                                 [22m┃[1m reward [22m┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━┩
+│ SUBREDDIT: r/AskReddit                                  │  I have feelings for a friend, and I can't get them    │ 0.869  │
+│ TITLE: How do you get someone out of your head?         │ out of my head. How do I get them out?                 │        │
+│ POST: Hi,                                               │                                                        │        │
+│ I'm 22, and I have been with my girlfriend for 5 years  │                                                        │        │
+│ now. We recently moved together. We've always loved     │                                                        │        │
+│ each other intensely.                                   │                                                        │        │
+│                                                         │                                                        │        │
+│ Problem, I recently started to have feelings for an     │                                                        │        │
+│ other person (a friend). This person has had a          │                                                        │        │
+│ boyfriend for now 3 years, and has absolutely no ideas. │                                                        │        │
+│ Those feelings were so strong, it was hard to hide      │                                                        │        │
+│ them. After 2 months of me being distant and really     │                                                        │        │
+│ sad, my girlfriend forced me to say what was bothering  │                                                        │        │
+│ me. I'm not a good liar, and now she knows.             │                                                        │        │
+│                                                         │                                                        │        │
+│ We decided to give us a week alone, I went to my        │                                                        │        │
+│ parents.                                                │                                                        │        │
+│                                                         │                                                        │        │
+│ Now, I'm completely lost. I keep on thinking about this │                                                        │        │
+│ person, and I hate that. I would like for those         │                                                        │        │
+│ feelings to go away, to leave me alone. But I can't.    │                                                        │        │
+│                                                         │                                                        │        │
+│ What do I do? It's been 3 months now, and I'm just      │                                                        │        │
+│ desperate.                                              │                                                        │        │
+│ TL;DR:                                                  │                                                        │        │
+├─────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────┼────────┤
+│ SUBREDDIT: r/pettyrevenge                               │  Mom woke me up with a loud TV. I got a little revenge │ 0.373  │
+│ TITLE: So, my mom woke me up with a loud TV.            │ by blasting Gangnam Style on repeat.                   │        │
+│ POST: She was in her living room, watching TV. This was │                                                        │        │
+│ at about 8:30 in the morning, and she was exercising.   │                                                        │        │
+│ She turned the TV up extra loud to hear it over her     │                                                        │        │
+│ excercycle, and woke me up. I went in there asking for  │                                                        │        │
+│ her to turn it down. She said she didn't have to; I     │                                                        │        │
+│ explained that I always used headphones so she didn't   │                                                        │        │
+│ have to deal with my noise and that she should give me  │                                                        │        │
+│ a little more respect, given that I paid rent at the    │                                                        │        │
+│ time.                                                   │                                                        │        │
+│                                                         │                                                        │        │
+│ She disagreed. I went back to my room, rather pissed    │                                                        │        │
+│ off at the lack of equality. I had no lock on my door;  │                                                        │        │
+│ but I had a dresser right next to it, so I pulled one   │                                                        │        │
+│ of the drawers out enough so that it caused the door to │                                                        │        │
+│ not be openable. Then, I turned my speakers up really   │                                                        │        │
+│ loud and blasted Gangnam Style on repeat, with the bass │                                                        │        │
+│ cranked up as high as it could go.                      │                                                        │        │
+│                                                         │                                                        │        │
+│ If you hate Gangnam Style for being overplayed, you     │                                                        │        │
+│ will see why I chose that particular song. I personally │                                                        │        │
+│ don't mind it. But here's the thing about my bass; it   │                                                        │        │
+│ vibrates the walls, making one hell of a lot of noise.  │                                                        │        │
+│ Needless to say, my mom was not pleased and shut off    │                                                        │        │
+│ the internet. But it was oh so worth it.                │                                                        │        │
+│ TL;DR:                                                  │                                                        │        │
+├─────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────┼────────┤
+│ SUBREDDIT: r/relationships                              │  Girlfriend cheated on me by kissing two guys at a     │ 0.418  │
+│ TITLE: My girlfriend (20f) of two years cheated on me   │ Halloween party. I'm not sure if I should try to fix   │        │
+│ (20m) by kissing two guys at a Halloween party.         │ it or just cut it off.                                 │        │
+│ POST: Lately her and I have been having a few problems, │                                                        │        │
+│ and these problems have been brought up before a few    │                                                        │        │
+│ times. One problem being that I don't show enough       │                                                        │        │
+│ affection. I don't tell her she's pretty very often or  │                                                        │        │
+│ don't compliment her much. I feel terrible about it,    │                                                        │        │
+│ but this time I was really trying to change for her.    │                                                        │        │
+│                                                         │                                                        │        │
+│ For Halloween she went to visit her step brother at a   │                                                        │        │
+│ college and I got drunk with my friends and watched     │                                                        │        │
+│ movies. Last night (11/1) we got in a huge fight about  │                                                        │        │
+│ me not changing and how our relationship won't work out │                                                        │        │
+│ and basically broke up over the phone. So in an effort  │                                                        │        │
+│ to try and fix it I drove to her house. She told me how │                                                        │        │
+│ at the parties she went to that two guys kissed her.    │                                                        │        │
+│ The first one she pushed away, but the second one I     │                                                        │        │
+│ asked her if she kissed him back and she said yes and   │                                                        │        │
+│ that she did it because it made her feel wanted, which  │                                                        │        │
+│ I guess I haven't been making her feel that way lately. │                                                        │        │
+│ We cried, we talked about everything, we had great sex, │                                                        │        │
+│ and I stayed over at her house just to sleep with her   │                                                        │        │
+│ and then snuck out in the morning so her parents        │                                                        │        │
+│ wouldn't know.                                          │                                                        │        │
+│                                                         │                                                        │        │
+│ We both obviously want to work things out but aren't    │                                                        │        │
+│ sure if we should. I love this girl, but the more I     │                                                        │        │
+│ think about it, all I can think about is her cheating   │                                                        │        │
+│ on me, and more importantly, liking it. It makes me     │                                                        │        │
+│ sick to my stomach. Should I even try to fix it or      │                                                        │        │
+│ would I be better off cutting all ties.                 │                                                        │        │
+│ TL;DR:                                                  │                                                        │        │
+└─────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────┴────────┘
+  0%|                                                                                               | 0/3200 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "trlx_gptneo_text_summarization.py", line 185, in <module>
+    config=config,
+  File "/home/ec2-user/rlhf/trlx/summarize_rlhf/trlx/trlx.py", line 122, in train
+    trainer.learn()
+  File "/home/ec2-user/rlhf/trlx/summarize_rlhf/trlx/trainer/accelerate_base_trainer.py", line 523, in learn
+    self.accelerator.backward(loss)
+  File "/home/ec2-user/venv/lib64/python3.7/site-packages/accelerate/accelerator.py", line 1677, in backward
+    self.deepspeed_engine_wrapped.backward(loss, **kwargs)
+  File "/home/ec2-user/venv/lib64/python3.7/site-packages/accelerate/utils/deepspeed.py", line 167, in backward
+    self.engine.backward(loss, **kwargs)
+  File "/home/ec2-user/venv/lib64/python3.7/site-packages/deepspeed/utils/nvtx.py", line 11, in wrapped_fn
+    ret_val = func(*args, **kwargs)
+  File "/home/ec2-user/venv/lib64/python3.7/site-packages/deepspeed/runtime/engine.py", line 1980, in backward
+    self.optimizer.backward(loss, retain_graph=retain_graph)
+  File "/home/ec2-user/venv/lib64/python3.7/site-packages/deepspeed/runtime/zero/stage_1_and_2.py", line 2022, in backward
+    self.loss_scaler.backward(loss.float(), retain_graph=retain_graph)
+  File "/home/ec2-user/venv/lib64/python3.7/site-packages/deepspeed/runtime/fp16/loss_scaler.py", line 56, in backward
+    scaled_loss.backward(retain_graph=retain_graph)
+  File "/home/ec2-user/venv/lib64/python3.7/site-packages/torch/_tensor.py", line 489, in backward
+    self, gradient, retain_graph, create_graph, inputs=inputs
+  File "/home/ec2-user/venv/lib64/python3.7/site-packages/torch/autograd/__init__.py", line 199, in backward
+    allow_unreachable=True, accumulate_grad=True)  # Calls into the C++ engine to run the backward pass
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 422.00 MiB (GPU 0; 22.06 GiB total capacity; 20.54 GiB already allocated; 378.38 MiB free; 21.29 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+[31m╭─────────────────────────────── [39m[1mTraceback (most recent call last)[31m[22m ────────────────────────────────╮
+[31m│[39m /home/ec2-user/rlhf/trlx/summarize_rlhf/[1mtrlx_gptneo_text_summarization.py[22m:[94m185[39m in [92m<module>[39m        [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   182 │   │   reward_fn=reward_fn,                                                               [31m│
+[31m│[39m   183 │   │   prompts=train_prompts,                                                             [31m│
+[31m│[39m   184 │   │   eval_prompts=val_prompts[[94m0[39m:[94m1000[39m],  # sampling 1000 validation prompts for evalua   [31m│
+[31m│[39m [31m❱ [39m185 │   │   config=config,                                                                     [31m│
+[31m│[39m   186 │   )                                                                                      [31m│
+[31m│[39m   187 │                                                                                          [31m│
+[31m│[39m   188 │   trainer.save_model([33m"1.3B_ppo_checkpoint"[39m)                                              [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ec2-user/rlhf/trlx/summarize_rlhf/trlx/[1mtrlx.py[22m:[94m122[39m in [92mtrain[39m                                [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   119 │   eval_pipeline = get_pipeline(config.train.pipeline)(eval_prompts, max_prompt_length,   [31m│
+[31m│[39m   120 │   trainer.add_eval_pipeline(eval_pipeline)                                               [31m│
+[31m│[39m   121 │                                                                                          [31m│
+[31m│[39m [31m❱ [39m122 │   trainer.learn()                                                                        [31m│
+[31m│[39m   123 │   [94mreturn[39m trainer                                                                         [31m│
+[31m│[39m   124                                                                                            [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ec2-user/rlhf/trlx/summarize_rlhf/trlx/trainer/[1maccelerate_base_trainer.py[22m:[94m523[39m in [92mlearn[39m     [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   520 │   │   │   │   │   │   │   loss, stats = [96mself[39m.loss(mb)                                    [31m│
+[31m│[39m   521 │   │   │   │   │   │   │   forward_time += time()                                         [31m│
+[31m│[39m   522 │   │   │   │   │   │   │   backward_time -= time()                                        [31m│
+[31m│[39m [31m❱ [39m523 │   │   │   │   │   │   │   [96mself[39m.accelerator.backward(loss)                                [31m│
+[31m│[39m   524 │   │   │   │   │   │   │   backward_time += time()                                        [31m│
+[31m│[39m   525 │   │   │   │   │   │   │   stats_accum.append(stats)                                      [31m│
+[31m│[39m   526                                                                                            [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ec2-user/venv/lib64/python3.7/site-packages/accelerate/[1maccelerator.py[22m:[94m1677[39m in [92mbackward[39m     [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   1674 │   │   │   # deepspeed handles loss scaling by gradient_accumulation_steps in its `back  [31m│
+[31m│[39m   1675 │   │   │   loss = loss / [96mself[39m.gradient_accumulation_steps                                [31m│
+[31m│[39m   1676 │   │   [94mif[39m [96mself[39m.distributed_type == DistributedType.DEEPSPEED:                            [31m│
+[31m│[39m [31m❱ [39m1677 │   │   │   [96mself[39m.deepspeed_engine_wrapped.backward(loss, **kwargs)                        [31m│
+[31m│[39m   1678 │   │   [94melif[39m [96mself[39m.distributed_type == DistributedType.MEGATRON_LM:                        [31m│
+[31m│[39m   1679 │   │   │   [94mreturn[39m                                                                        [31m│
+[31m│[39m   1680 │   │   [94melif[39m [96mself[39m.scaler [95mis[39m [95mnot[39m [94mNone[39m:                                                     [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ec2-user/venv/lib64/python3.7/site-packages/accelerate/utils/[1mdeepspeed.py[22m:[94m167[39m in [92mbackward[39m  [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   164 │                                                                                          [31m│
+[31m│[39m   165 │   [94mdef[39m [92mbackward[39m([96mself[39m, loss, **kwargs):                                                    [31m│
+[31m│[39m   166 │   │   # runs backpropagation and handles mixed precision                                 [31m│
+[31m│[39m [31m❱ [39m167 │   │   [96mself[39m.engine.backward(loss, **kwargs)                                               [31m│
+[31m│[39m   168 │   │                                                                                      [31m│
+[31m│[39m   169 │   │   # Deepspeed's `engine.step` performs the following operations:                     [31m│
+[31m│[39m   170 │   │   # - gradient accumulation check                                                    [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ec2-user/venv/lib64/python3.7/site-packages/deepspeed/utils/[1mnvtx.py[22m:[94m11[39m in [92mwrapped_fn[39m       [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m    8 │   [33mfunction call."""[39m                                                                       [31m│
+[31m│[39m    9 │   [94mdef[39m [92mwrapped_fn[39m(*args, **kwargs):                                                        [31m│
+[31m│[39m   10 │   │   get_accelerator().range_push(func.[91m__qualname__[39m)                                     [31m│
+[31m│[39m [31m❱ [39m11 │   │   ret_val = func(*args, **kwargs)                                                     [31m│
+[31m│[39m   12 │   │   get_accelerator().range_pop()                                                       [31m│
+[31m│[39m   13 │   │   [94mreturn[39m ret_val                                                                      [31m│
+[31m│[39m   14                                                                                             [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ec2-user/venv/lib64/python3.7/site-packages/deepspeed/runtime/[1mengine.py[22m:[94m1980[39m in [92mbackward[39m   [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   1977 │   │   [94mif[39m [96mself[39m.zero_optimization():                                                      [31m│
+[31m│[39m   1978 │   │   │   [96mself[39m.optimizer.is_gradient_accumulation_boundary = [96mself[39m.is_gradient_accumula  [31m│
+[31m│[39m   1979 │   │   │   )                                                                             [31m│
+[31m│[39m [31m❱ [39m1980 │   │   │   [96mself[39m.optimizer.backward(loss, retain_graph=retain_graph)                      [31m│
+[31m│[39m   1981 │   │   [94melif[39m [96mself[39m.amp_enabled():                                                          [31m│
+[31m│[39m   1982 │   │   │   # AMP requires delaying unscale when inside gradient accumulation boundaries  [31m│
+[31m│[39m   1983 │   │   │   # https://nvidia.github.io/apex/advanced.html#gradient-accumulation-across-i  [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ec2-user/venv/lib64/python3.7/site-packages/deepspeed/runtime/zero/[1mstage_1_and_2.py[22m:[94m2022[39m   [31m│
+[31m│[39m in [92mbackward[39m                                                                                      [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   2019 │   │   │   scaled_loss = [96mself[39m.external_loss_scale * loss                                 [31m│
+[31m│[39m   2020 │   │   │   scaled_loss.backward()                                                        [31m│
+[31m│[39m   2021 │   │   [94melse[39m:                                                                             [31m│
+[31m│[39m [31m❱ [39m2022 │   │   │   [96mself[39m.loss_scaler.backward(loss.float(), retain_graph=retain_graph)            [31m│
+[31m│[39m   2023 │                                                                                         [31m│
+[31m│[39m   2024 │   [94mdef[39m [92mcheck_overflow[39m([96mself[39m, partition_gradients=[94mTrue[39m):                                   [31m│
+[31m│[39m   2025 │   │   [96mself[39m._check_overflow(partition_gradients)                                         [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ec2-user/venv/lib64/python3.7/site-packages/deepspeed/runtime/fp16/[1mloss_scaler.py[22m:[94m56[39m in    [31m│
+[31m│[39m [92mbackward[39m                                                                                         [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m    53 │                                                                                          [31m│
+[31m│[39m    54 │   [94mdef[39m [92mbackward[39m([96mself[39m, loss, retain_graph=[94mFalse[39m):                                          [31m│
+[31m│[39m    55 │   │   scaled_loss = loss * [96mself[39m.loss_scale                                               [31m│
+[31m│[39m [31m❱ [39m 56 │   │   scaled_loss.backward(retain_graph=retain_graph)                                    [31m│
+[31m│[39m    57                                                                                            [31m│
+[31m│[39m    58                                                                                            [31m│
+[31m│[39m    59 [94mclass[39m [4mLossScaler[24m(LossScalerBase):                                                          [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ec2-user/venv/lib64/python3.7/site-packages/torch/[1m_tensor.py[22m:[94m489[39m in [92mbackward[39m               [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m    486 │   │   │   │   inputs=inputs,                                                            [31m│
+[31m│[39m    487 │   │   │   )                                                                             [31m│
+[31m│[39m    488 │   │   torch.autograd.backward(                                                          [31m│
+[31m│[39m [31m❱ [39m 489 │   │   │   [96mself[39m, gradient, retain_graph, create_graph, inputs=inputs                     [31m│
+[31m│[39m    490 │   │   )                                                                                 [31m│
+[31m│[39m    491 │                                                                                         [31m│
+[31m│[39m    492 │   [94mdef[39m [92mregister_hook[39m([96mself[39m, hook):                                                        [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /home/ec2-user/venv/lib64/python3.7/site-packages/torch/autograd/[1m__init__.py[22m:[94m199[39m in [92mbackward[39m     [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   196 │   # calls in the traceback and some print out the last line                              [31m│
+[31m│[39m   197 │   Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the bac   [31m│
+[31m│[39m   198 │   │   tensors, grad_tensors_, retain_graph, create_graph, inputs,                        [31m│
+[31m│[39m [31m❱ [39m199 │   │   allow_unreachable=[94mTrue[39m, accumulate_grad=[94mTrue[39m)  # Calls into the C++ engine to ru   [31m│
+[31m│[39m   200                                                                                            [31m│
+[31m│[39m   201 [94mdef[39m [92mgrad[39m(                                                                                  [31m│
+[31m│[39m   202 │   outputs: _TensorOrTensors,                                                             [31m│
+[31m╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+[1mOutOfMemoryError: [22mCUDA out of memory. Tried to allocate [1m422.00[22m MiB [1m([22mGPU [1m0[22m; [1m22.06[22m GiB total capacity; [1m20.54[22m GiB already
+allocated; [1m378.38[22m MiB free; [1m21.29[22m GiB reserved in total by PyTorch[1m)[22m If reserved memory is >> allocated memory try setting
+max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

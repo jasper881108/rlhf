@@ -1,0 +1,126 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    python_version: 3.7.16
+    cli_version: 0.14.2
+    framework: huggingface
+    huggingface_version: 4.27.1
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1681200055.79077
+    t:
+      1:
+      - 1
+      - 11
+      - 30
+      - 49
+      - 51
+      - 55
+      - 71
+      - 85
+      2:
+      - 1
+      - 11
+      - 30
+      - 49
+      - 51
+      - 55
+      - 71
+      - 85
+      3:
+      - 13
+      - 15
+      - 23
+      4: 3.7.16
+      5: 0.14.2
+      6: 4.27.1
+      8:
+      - 5
+method:
+  desc: null
+  value:
+    name: PPOConfig
+    ppo_epochs: 4
+    num_rollouts: 64
+    chunk_size: 16
+    init_kl_coef: 0.1
+    target: 6
+    horizon: 10000
+    gamma: 1
+    lam: 0.95
+    cliprange: 0.2
+    cliprange_value: 0.2
+    vf_coef: 0.2
+    scale_reward: null
+    ref_mean: null
+    ref_std: null
+    cliprange_reward: 10
+    gen_kwargs:
+      max_new_tokens: 50
+    gen_experience_kwargs: null
+model:
+  desc: null
+  value:
+    model_path: ./1.3B_sft_checkpoint/checkpoint-750
+    model_arch_type: causal
+    num_layers_unfrozen: 8
+    delta_kwargs: null
+optimizer:
+  desc: null
+  value:
+    name: adamw
+    kwargs:
+      lr: 5.0e-06
+      betas:
+      - 0.9
+      - 0.999
+      eps: 1.0e-08
+      weight_decay: 0.01
+scheduler:
+  desc: null
+  value:
+    name: cosine_annealing
+    kwargs:
+      T_max: 100000
+      eta_min: 5.0e-06
+tokenizer:
+  desc: null
+  value:
+    tokenizer_path: gpt2
+    padding_side: left
+    truncation_side: right
+train:
+  desc: null
+  value:
+    total_steps: 100000
+    seq_length: 550
+    epochs: 50
+    batch_size: 4
+    checkpoint_interval: 10000
+    eval_interval: 200
+    pipeline: PromptPipeline
+    trainer: AcceleratePPOTrainer
+    trainer_kwargs: {}
+    project_name: trlx
+    entity_name: null
+    group_name: null
+    checkpoint_dir: ckpts
+    rollout_logging_dir: null
+    save_best: true
+    tracker: wandb
+    logging_dir: null
+    tags: []
+    seed: 1000
+    minibatch_size: null
+distributed:
+  desc: null
+  value:
+    mixed_precision: fp16
+    num_gpus: 3
+    gradient_accumulation_steps: 4
+    gradient_clipping: null
+    zero_stage: 2
+    offload_optimizer_device: cpu
+    offload_param_device: cpu
