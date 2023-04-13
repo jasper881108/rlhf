@@ -27,3 +27,4 @@
 3. trlx_summarize_rlhf: Store trlx method of summarization using rlhf
 4. openai_api: Helper script to call openai_api, you should put your personal api key in 'rlhf/openai_api/openai_api.txt'
 5. metadata: Store summarization result
+6. human_preference: Result from Google Forms that record human preference of model output
