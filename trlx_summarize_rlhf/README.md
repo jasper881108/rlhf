@@ -52,7 +52,7 @@ The following tables display ROUGE and reward scores on the test set of the TL;D
     Ground Truth is 3.158
     | Model | Average Reward | Reward $\Delta$ |
     | --- | --- | --- |
-    | SFT | 3.234 | +0.76 |
+    | SFT | 3.234 | +0.076 |
     | PPO | 3.457 | +0.299 |
 
 
